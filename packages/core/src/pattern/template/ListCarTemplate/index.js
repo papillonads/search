@@ -1,0 +1,1 @@
+export { ListCarTemplate } from './ListCarTemplate'

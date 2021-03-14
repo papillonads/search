@@ -1,0 +1,6 @@
+@import '~@papillonads/css/build/primer/support/mixins/layout.scss';
+@import '../../../index.scss';
+
+.navigator {
+  @include navigator;
+}
