@@ -1352,10 +1352,11 @@ exports[`<ListCarTemplate /> Render must match regular() 1`] = `
             className="contentDisplaySearchPartField"
           >
             <button
+              aria-disabled="true"
               autoFocus={false}
-              className="contentDisplaySearchPartFieldButton btn btn-primary"
+              className="contentDisplaySearchPartFieldButton btn btn-primary button-inactive"
               data-test={null}
-              id={null}
+              id="B"
               onClick={[Function]}
               type="button"
             >
