@@ -1,0 +1,157 @@
+|\_**\_index.scss
+|\_**\_route
+| |\_\_**index.js
+| |**\_\_**tests**
+| | |\_\_**path.test.js
+| | |\_**\_index.test.js
+| |\_\_**path.js
+|\_**\_index.js
+|\_\_**library
+| |\_**\_constant
+| | |\_\_**carTransmissions.js
+| | |\_**\_index.js
+| | |\_\_\_\_**tests**
+| | | |\_\_**index.test.js
+| | |\_**\_carColors.js
+| | |\_\_**alertText
+| | | |\_**\_app
+| | | | |\_\_**index.js
+| | | |\_**\_listCars
+| | | | |\_\_**index.js
+| | |\_**\_carYears.js
+| | |\_\_**carBodyworks.js
+| | |\_**\_carBrands.js
+| | |\_\_**carFuels.js
+| |\_**\_environment
+| | |\_\_**host
+| | | |\_**\_index.js
+| | | |\_\_\_\_**tests**
+| | | | |\_\_**index.test.js
+|\_**\_state
+| |\_\_**mock
+| | |\_**\_index.js
+| |\_\_**index.js
+| |\_**\_default
+| | |\_\_**ui
+| | | |\_**\_index.js
+| | |\_\_**context
+| | | |\_**\_index.js
+| | | |\_\_**progress.js
+| | | |\_**\_navigation.js
+| | |\_\_**index.js
+|\_**\_tree.md
+|\_\_**pattern
+| |\_**\_page
+| | |\_\_**ListCarPage
+| | | |\_**\_ListCarPage.md
+| | | |\_\_**index.js
+| | | |**\_\_**tests**
+| | | | |\_\_**ListCarPage.int.test.js
+| | | | |\_**\_ListCarPage.int.story.js
+| | | | |\_\_\_\_**snapshots**
+| | | | | |\_\_**ListCarPage.int.test.js.snap
+| | | |\_**\_ListCarPage.prop.js
+| | | |\_\_**ListCarPage.jsx
+| | | |\_**\_AsyncListCarPage.jsx
+| | |\_\_**NotFoundPage
+| | | |\_**\_NotFoundPage.jsx
+| | | |\_\_**AsyncNotFoundPage.jsx
+| | | |\_**\_index.js
+| | | |\_\_\_\_**tests**
+| | | | |\_\_**NotFoundPage.int.story.js
+| | | | |\_**\_NotFoundPage.int.test.js
+| | | | |\_\_\_\_**snapshots**
+| | | | | |\_\_**NotFoundPage.int.test.js.snap
+| | | |\_**\_NotFoundPage.md
+| | | |\_\_**NotFoundPage.prop.js
+| |\_**\_.DS_Store
+| |\_\_**atom
+| | |\_**\_.gitkeep
+| |\_\_**organism
+| | |\_**\_.gitkeep
+| |\_\_**template
+| | |\_**\_.DS_Store
+| | |\_\_**NotFoundTemplate
+| | | |\_**\_NotFoundTemplate.md
+| | | |\_\_**NotFoundTemplate.scss
+| | | |\_**\_NotFoundTemplate.prop.js
+| | | |\_\_**index.js
+| | | |**\_\_**tests**
+| | | | |\_\_**NotFoundTemplate.int.test.js
+| | | | |\_**\_NotFoundTemplate.int.story.js
+| | | | |\_\_\_\_**snapshots**
+| | | | | |\_\_**NotFoundTemplate.int.test.js.snap
+| | | |\_**\_NotFoundTemplate.jsx
+| | |\_\_**ListCarTemplate
+| | | |\_**\_ListCarTemplate.hook.js
+| | | |\_\_**index.js
+| | | |\_**\_ListCarTemplate.prop.js
+| | | |\_\_**ListCarTemplate.scss
+| | | |**\_\_**tests**
+| | | | |\_\_**ListCarTemplate.int.story.js
+| | | | |\_**\_ListCarTemplate.int.test.js
+| | | | |\_\_\_\_**snapshots**
+| | | | | |\_\_**ListCarTemplate.int.test.js.snap
+| | | |\_**\_ListCarTemplate.jsx
+| | | |\_\_**ListCarTemplate.md
+| |\_**\_molecule
+| | |\_\_**Navigator
+| | | |\_**\_Navigator.prop.js
+| | | |\_\_**Navigator.md
+| | | |\_**\_Navigator.hook.js
+| | | |\_\_**Navigator.scss
+| | | |\_**\_index.js
+| | | |\_\_\_\_**tests**
+| | | | |\_\_**Navigator.int.story.js
+| | | | |\_**\_Navigator.int.test.js
+| | | | |\_\_\_\_**snapshots**
+| | | | | |\_\_**Navigator.int.test.js.snap
+| | | |\_**\_Navigator.jsx
+|\_\_**clientRenderApp.js
+|\_**\_store
+| |\_\_**client.js
+| |\_**\_thunk
+| | |\_\_**context
+| | | |\_**\_progress
+| | | | |\_\_**set
+| | | | | |\_**\_index.js
+| |\_\_**dispatch
+| | |\_**\_index.js
+| | |\_\_\_\_**tests**
+| | | |\_\_**index.test.js
+| |\_**\_reducer
+| | |\_\_**ui
+| | | |\_**\_newCars
+| | | | |\_\_**random
+| | | | | |\_**\_carsObjects.js
+| | | | | |\_\_**cars.js
+| | | |\_**\_listCars
+| | | | |\_\_**pagination
+| | | | | |\_**\_index.js
+| | | | |\_\_**sort
+| | | | | |\_**\_index.js
+| | | | |\_\_**get
+| | | | | |\_**\_index.js
+| | | | |\_\_**search
+| | | | | |\_**\_index.js
+| | | | |\_\_**select
+| | | | | |\_**\_carsObjects.js
+| | | | | |\_\_**index.js
+| | |\_**\_context
+| | | |\_\_**progress
+| | | | |\_**\_set
+| | | | | |\_\_**index.js
+| | | |\_**\_navigation
+| | | | |\_\_**set
+| | | | | |\_**\_index.js
+| | |\_\_**index.js
+| |\_**\_action
+| | |\_\_**actionCreators.js
+| | |**\_\_**tests**
+| | | |\_\_**actionTypes.test.js
+| | | |\_**\_actionCreators.test.js
+| | |\_\_**actionTypes.js
+| |**\_\_**tests**
+| | |\_\_**client.test.js
+| | |\_**\_base.test.js
+| |\_\_\*\*base.js
