@@ -12,7 +12,9 @@ export function getListCarsSearch({ state, action }) {
     action.payload?.model ??
     getItemsDefaultSelected({
       defaultItems: carBrandsDefault[0].models,
-      items: carBrands.find(({ name }) => name === newSearchBrand?.find(({ isSelected }) => isSelected === true)?.text)?.models,
+      items:
+        carBrands?.find(({ name }) => name === newSearchBrand?.find(({ isSelected }) => isSelected === true)?.text)?.models ??
+        carBrandsDefault[0].models,
     })
 
   newSearch = {
