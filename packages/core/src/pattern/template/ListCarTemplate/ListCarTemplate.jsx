@@ -41,6 +41,7 @@ export function ListCarTemplate() {
     sort,
     search,
     paginatedRandomCarsObjectsNamesValues,
+    isSearchEnabled,
     searchBrandOnChange,
     searchModelOnChange,
     searchYearOnChange,
@@ -109,12 +110,13 @@ export function ListCarTemplate() {
               </div>
               <div className={contentDisplaySearchPartField}>
                 <Button
+                  id="B"
                   className={contentDisplaySearchPartFieldButton}
                   text="Search Cars"
                   icon={{ alignment: iconAlignment.left, name: iconName.Search16 }}
                   variant={buttonVariant.primary}
                   onClick={searchCarsButtonOnClick}
-                  state={progress.isLoading ? buttonState.inactive : buttonState.active}
+                  state={isSearchEnabled ? buttonState.active : buttonState.inactive}
                 />
               </div>
             </div>

@@ -4,16 +4,15 @@ import { paginate } from '@papillonads/library/pagination'
 import { useBindActionCreators } from '../../../store/dispatch'
 import { eventKey, messageType, pageContent } from '../../../library/constant'
 import { alertTextListCars } from '../../../library/constant/alertText/listCars'
+import { carBrandsDefault } from '../../../library/constant/carBrands'
 
 export function useListCarState() {
   const {
-    uiCreateListCarsAction,
     uiSelectListCarsAction,
     uiSetListCarsSortAction,
     uiSetListCarsSearchAction,
     uiSetListCarsPaginationAction,
     contextSetProgressRegularThunk,
-    contextSetProgressConsentThunk,
   } = useBindActionCreators()
 
   const progress = useSelector(({ context }) => context.progress)
@@ -21,7 +20,6 @@ export function useListCarState() {
   const {
     carsObjects,
     pagination: { pageSize, pageNumber, currentPage },
-    edit,
     sort,
     search,
   } = useSelector(({ ui }) => ui.listCars)
@@ -62,6 +60,16 @@ export function useListCarState() {
       }),
     }))(carsObject),
   )
+
+  const searchBrand = search?.brand?.find(({ isSelected }) => isSelected === true)
+  const searchModel = search?.model?.find(({ isSelected }) => isSelected === true)
+
+  const isSearchEnabled =
+    !progress.isLoading &&
+    searchBrand?.text !== carBrandsDefault[0].name &&
+    searchModel?.text !== undefined &&
+    searchModel?.text !== carBrandsDefault[0].models[0].name &&
+    search?.license?.length > 0
 
   /* istanbul ignore next */
   function searchBrandOnChange(newBrand) {
@@ -148,36 +156,12 @@ export function useListCarState() {
 
   /* istanbul ignore next */
   function searchCarsButtonOnClick() {
-    if (!edit.license) {
-      contextSetProgressRegularThunk({
-        message: { text: alertTextListCars.action.create.validation.emptyLicense, type: messageType.warning },
-      })
-      return
-    }
-
-    if (carsObjects.some(({ license }) => license === edit.license)) {
-      contextSetProgressRegularThunk({
-        message: { text: alertTextListCars.action.create.validation.sameLicense(edit.license), type: messageType.warning },
-      })
-      return
-    }
-
-    contextSetProgressConsentThunk({
-      message: { text: alertTextListCars.action.create.consent.question(edit.license), type: messageType.consent },
-      isLoading: true,
-      consent: {
-        action: {
-          approve: () => {
-            uiCreateListCarsAction()
-            contextSetProgressRegularThunk({ message: { text: alertTextListCars.action.create.success, type: messageType.success } })
-          },
-          cancel: () => {
-            contextSetProgressRegularThunk({
-              message: { text: alertTextListCars.action.create.consent.cancel, type: messageType.warning },
-            })
-          },
-        },
-      },
+    contextSetProgressRegularThunk({ message: { text: alertTextListCars.action.search.progress, type: messageType.info }, isLoading: true })
+    uiSetListCarsSearchAction({
+      brand: search.brand,
+      model: search.model,
+      year: search.year,
+      license: search.license,
     })
   }
 
@@ -189,6 +173,7 @@ export function useListCarState() {
     sort,
     search,
     paginatedRandomCarsObjectsNamesValues,
+    isSearchEnabled,
     searchBrandOnChange,
     searchModelOnChange,
     searchYearOnChange,
