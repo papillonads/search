@@ -96,6 +96,7 @@ export function getListCarsSearch({ search, newSearchCarsObjects }) {
 
   newSearch = {
     brand: search?.brand,
+    model: search?.model,
     year: search?.year,
     license: search?.license,
     carsObjects: !search
@@ -108,6 +109,20 @@ export function getListCarsSearch({ search, newSearchCarsObjects }) {
 
   newSearch = {
     brand: search?.brand,
+    model: search?.model,
+    year: search?.year,
+    license: search?.license,
+    carsObjects: !search
+      ? newSearch?.carsObjects
+      : getListCarsObjectsByModel({
+          objects: newSearch?.carsObjects || newSearchCarsObjects,
+          model: search?.model,
+        }),
+  }
+
+  newSearch = {
+    brand: search?.brand,
+    model: search?.model,
     year: search?.year,
     license: search?.license,
     carsObjects: !search
@@ -120,6 +135,7 @@ export function getListCarsSearch({ search, newSearchCarsObjects }) {
 
   newSearch = {
     brand: search?.brand,
+    model: search?.model,
     year: search?.year,
     license: search?.license,
     carsObjects: !search
