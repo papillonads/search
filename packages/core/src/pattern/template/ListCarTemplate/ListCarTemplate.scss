@@ -44,12 +44,8 @@
             margin-bottom: 15px;
           }
 
-          &Dropdown {
-            details {
-              width: 100%;
-            }
-
-            summary {
+          &Select {
+            select {
               width: 100%;
             }
           }
@@ -92,8 +88,8 @@
           min-width: 325px;
         }
 
-        &Dropdown {
-          summary {
+        &Select {
+          select {
             min-width: 325px;
           }
         }

@@ -87,12 +87,12 @@ export function useListCarState() {
   }
 
   /* istanbul ignore next */
-  function searchBrandOnClick(newBrand) {
+  function searchBrandOnChange(newBrand) {
     uiSetListCarsSearchAction({ brand: newBrand.items, year: search.year, license: search.license })
   }
 
   /* istanbul ignore next */
-  function searchYearOnClick(newYear) {
+  function searchYearOnChange(newYear) {
     uiSetListCarsSearchAction({ brand: search.brand, year: newYear.items, license: search.license })
   }
 
@@ -165,37 +165,37 @@ export function useListCarState() {
   }
 
   /* istanbul ignore next */
-  function editObjectBodyworkOnClick(newBodywork) {
+  function editObjectBodyworkOnChange(newBodywork) {
     uiSetListCarsEditAction({ ...edit, bodywork: newBodywork.items })
   }
 
   /* istanbul ignore next */
-  function editObjectBrandOnClick(newBrand) {
+  function editObjectBrandOnChange(newBrand) {
     uiSetListCarsEditAction({ ...edit, brand: newBrand.items })
   }
 
   /* istanbul ignore next */
-  function editObjectModelOnClick(newModel) {
+  function editObjectModelOnChange(newModel) {
     uiSetListCarsEditAction({ ...edit, model: newModel.items })
   }
 
   /* istanbul ignore next */
-  function editObjectColorOnClick(newColor) {
+  function editObjectColorOnChange(newColor) {
     uiSetListCarsEditAction({ ...edit, color: newColor.items })
   }
 
   /* istanbul ignore next */
-  function editObjectFuelOnClick(newFuel) {
+  function editObjectFuelOnChange(newFuel) {
     uiSetListCarsEditAction({ ...edit, fuel: newFuel.items })
   }
 
   /* istanbul ignore next */
-  function editObjectTransmissionOnClick(newTransmission) {
+  function editObjectTransmissionOnChange(newTransmission) {
     uiSetListCarsEditAction({ ...edit, transmission: newTransmission.items })
   }
 
   /* istanbul ignore next */
-  function editObjectYearOnClick(newYear) {
+  function editObjectYearOnChange(newYear) {
     uiSetListCarsEditAction({ ...edit, year: newYear.items })
   }
 
@@ -349,8 +349,8 @@ export function useListCarState() {
     sort,
     search,
     paginatedRandomCarsObjectsNamesValues,
-    searchBrandOnClick,
-    searchYearOnClick,
+    searchBrandOnChange,
+    searchYearOnChange,
     searchLicenseOnChange,
     searchLicenseOnKeyUp,
     searchLicenseOnFocus,
@@ -359,13 +359,13 @@ export function useListCarState() {
     carsObjectsFlexGridOnChange,
     carsObjectsFlexGridOnClick,
     editObjectLicenseOnChange,
-    editObjectBodyworkOnClick,
-    editObjectBrandOnClick,
-    editObjectModelOnClick,
-    editObjectColorOnClick,
-    editObjectFuelOnClick,
-    editObjectTransmissionOnClick,
-    editObjectYearOnClick,
+    editObjectBodyworkOnChange,
+    editObjectBrandOnChange,
+    editObjectModelOnChange,
+    editObjectColorOnChange,
+    editObjectFuelOnChange,
+    editObjectTransmissionOnChange,
+    editObjectYearOnChange,
     editObjectPriceOnChange,
     editObjectConsumptionOnChange,
     editObjectMaintenanceOnChange,

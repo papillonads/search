@@ -13,14 +13,14 @@ import {
   contentDisplaySearch,
   contentDisplaySearchPart,
   contentDisplaySearchPartField,
-  contentDisplaySearchPartFieldDropdown,
+  contentDisplaySearchPartFieldSelect,
   contentDisplaySearchPartFieldInput,
   contentDisplayGridListCars,
   contentDisplayPagination,
   contentDisplayEdit,
   contentDisplayEditField,
   contentDisplayEditFieldLabel,
-  contentDisplayEditFieldDropdown,
+  contentDisplayEditFieldSelect,
   contentDisplayEditFieldInput,
   contentDisplayAction,
   contentDisplayActionGroup,
@@ -31,7 +31,6 @@ export function ListCarTemplate() {
   const {
     Alert: { Alert, alertVariant },
     Button: { Button, buttonVariant, iconAlignment, buttonState },
-    Dropdown: { Dropdown, dropdownState },
     Form: {
       Input: { Input, inputState },
     },
@@ -39,6 +38,7 @@ export function ListCarTemplate() {
     Icon: { iconName },
     Label,
     Pagination: { PreviousNext, previousNextState },
+    Select: { Select, selectState },
   } = primer
 
   const {
@@ -52,8 +52,8 @@ export function ListCarTemplate() {
     sort,
     search,
     paginatedRandomCarsObjectsNamesValues,
-    searchBrandOnClick,
-    searchYearOnClick,
+    searchBrandOnChange,
+    searchYearOnChange,
     searchLicenseOnChange,
     searchLicenseOnKeyUp,
     searchLicenseOnFocus,
@@ -62,13 +62,13 @@ export function ListCarTemplate() {
     carsObjectsFlexGridOnChange,
     carsObjectsFlexGridOnClick,
     editObjectLicenseOnChange,
-    editObjectBodyworkOnClick,
-    editObjectBrandOnClick,
-    editObjectModelOnClick,
-    editObjectColorOnClick,
-    editObjectFuelOnClick,
-    editObjectTransmissionOnClick,
-    editObjectYearOnClick,
+    editObjectBodyworkOnChange,
+    editObjectBrandOnChange,
+    editObjectModelOnChange,
+    editObjectColorOnChange,
+    editObjectFuelOnChange,
+    editObjectTransmissionOnChange,
+    editObjectYearOnChange,
     editObjectPriceOnChange,
     editObjectConsumptionOnChange,
     editObjectMaintenanceOnChange,
@@ -88,12 +88,12 @@ export function ListCarTemplate() {
           <div className={contentDisplaySearch}>
             <div className={contentDisplaySearchPart}>
               <div className={contentDisplaySearchPartField}>
-                <Dropdown
-                  className={contentDisplaySearchPartFieldDropdown}
-                  summary={search?.brand?.find(({ isSelected }) => isSelected === true)?.text}
+                <Select
+                  className={contentDisplaySearchPartFieldSelect}
+                  selectedText={search?.brand?.find(({ isSelected }) => isSelected === true)?.text}
                   items={search?.brand}
-                  onClick={searchBrandOnClick}
-                  state={progress.isLoading ? dropdownState.inactive : dropdownState.active}
+                  onChange={searchBrandOnChange}
+                  state={progress.isLoading ? selectState.inactive : selectState.active}
                 />
               </div>
               <div className={contentDisplaySearchPartField}>
@@ -112,12 +112,12 @@ export function ListCarTemplate() {
             </div>
             <div className={contentDisplaySearchPart}>
               <div className={contentDisplaySearchPartField}>
-                <Dropdown
-                  className={contentDisplaySearchPartFieldDropdown}
-                  summary={search?.year?.find(({ isSelected }) => isSelected === true)?.text}
+                <Select
+                  className={contentDisplaySearchPartFieldSelect}
+                  selectedText={search?.year?.find(({ isSelected }) => isSelected === true)?.text}
                   items={search?.year}
-                  onClick={searchYearOnClick}
-                  state={progress.isLoading ? dropdownState.inactive : dropdownState.active}
+                  onChange={searchYearOnChange}
+                  state={progress.isLoading ? selectState.inactive : selectState.active}
                 />
               </div>
             </div>
@@ -168,74 +168,74 @@ export function ListCarTemplate() {
               </div>
               <div className={contentDisplayEditField}>
                 <Label className={contentDisplayEditFieldLabel} text="Brand (Make)" />
-                <Dropdown
-                  className={contentDisplayEditFieldDropdown}
-                  summary={getSelectedItemText({ items: edit?.brand })}
+                <Select
+                  className={contentDisplayEditFieldSelect}
+                  selectedText={getSelectedItemText({ items: edit?.brand })}
                   items={edit?.brand}
-                  onClick={editObjectBrandOnClick}
-                  state={progress.isLoading ? dropdownState.inactive : dropdownState.active}
+                  onChange={editObjectBrandOnChange}
+                  state={progress.isLoading ? selectState.inactive : selectState.active}
                 />
               </div>
               <div className={contentDisplayEditField}>
                 <Label className={contentDisplayEditFieldLabel} text="Model" />
-                <Dropdown
-                  className={contentDisplayEditFieldDropdown}
-                  summary={getSelectedItemText({ items: edit?.model })}
+                <Select
+                  className={contentDisplayEditFieldSelect}
+                  selectedText={getSelectedItemText({ items: edit?.model })}
                   items={edit?.model}
-                  onClick={editObjectModelOnClick}
-                  state={progress.isLoading ? dropdownState.inactive : dropdownState.active}
+                  onChange={editObjectModelOnChange}
+                  state={progress.isLoading ? selectState.inactive : selectState.active}
                 />
               </div>
               <div className={contentDisplayEditField}>
                 <Label className={contentDisplayEditFieldLabel} text="Bodywork" />
-                <Dropdown
-                  className={contentDisplayEditFieldDropdown}
-                  summary={getSelectedItemText({ items: edit?.bodywork })}
+                <Select
+                  className={contentDisplayEditFieldSelect}
+                  selectedText={getSelectedItemText({ items: edit?.bodywork })}
                   items={edit?.bodywork}
-                  onClick={editObjectBodyworkOnClick}
-                  state={progress.isLoading ? dropdownState.inactive : dropdownState.active}
+                  onChange={editObjectBodyworkOnChange}
+                  state={progress.isLoading ? selectState.inactive : selectState.active}
                 />
               </div>
               <div className={contentDisplayEditField}>
                 <Label className={contentDisplayEditFieldLabel} text="Color" />
-                <Dropdown
-                  className={contentDisplayEditFieldDropdown}
-                  summary={getSelectedItemText({ items: edit?.color })}
+                <Select
+                  className={contentDisplayEditFieldSelect}
+                  selectedText={getSelectedItemText({ items: edit?.color })}
                   items={edit?.color}
-                  onClick={editObjectColorOnClick}
-                  state={progress.isLoading ? dropdownState.inactive : dropdownState.active}
+                  onChange={editObjectColorOnChange}
+                  state={progress.isLoading ? selectState.inactive : selectState.active}
                 />
               </div>
               <div className={contentDisplayEditField}>
                 <Label className={contentDisplayEditFieldLabel} text="Fuel Type" />
-                <Dropdown
-                  className={contentDisplayEditFieldDropdown}
-                  summary={getSelectedItemText({ items: edit?.fuel })}
+                <Select
+                  className={contentDisplayEditFieldSelect}
+                  selectedText={getSelectedItemText({ items: edit?.fuel })}
                   items={edit?.fuel}
-                  onClick={editObjectFuelOnClick}
-                  state={progress.isLoading ? dropdownState.inactive : dropdownState.active}
+                  onChange={editObjectFuelOnChange}
+                  state={progress.isLoading ? selectState.inactive : selectState.active}
                 />
               </div>
               <div className={contentDisplayEditField}>
                 <Label className={contentDisplayEditFieldLabel} text="Transmission" />
-                <Dropdown
-                  className={contentDisplayEditFieldDropdown}
-                  summary={getSelectedItemText({ items: edit?.transmission })}
+                <Select
+                  className={contentDisplayEditFieldSelect}
+                  selectedText={getSelectedItemText({ items: edit?.transmission })}
                   items={edit?.transmission}
-                  onClick={editObjectTransmissionOnClick}
-                  state={progress.isLoading ? dropdownState.inactive : dropdownState.active}
+                  onChange={editObjectTransmissionOnChange}
+                  state={progress.isLoading ? selectState.inactive : selectState.active}
                 />
               </div>
             </div>
             <div>
               <div className={contentDisplayEditField}>
                 <Label className={contentDisplayEditFieldLabel} text="Year" />
-                <Dropdown
-                  className={contentDisplayEditFieldDropdown}
-                  summary={getSelectedItemText({ items: edit?.year })}
+                <Select
+                  className={contentDisplayEditFieldSelect}
+                  selectedText={getSelectedItemText({ items: edit?.year })}
                   items={edit?.year}
-                  onClick={editObjectYearOnClick}
-                  state={progress.isLoading ? dropdownState.inactive : dropdownState.active}
+                  onChange={editObjectYearOnChange}
+                  state={progress.isLoading ? selectState.inactive : selectState.active}
                 />
               </div>
               <div className={contentDisplayEditField}>
