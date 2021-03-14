@@ -101,6 +101,7 @@ export function ListCarTemplate() {
               </div>
               <div className={contentDisplaySearchPartField}>
                 <Select
+                  id="S3"
                   className={contentDisplaySearchPartFieldSelect}
                   selectedText={search?.year?.find(({ isSelected }) => isSelected === true)?.text}
                   items={search?.year}

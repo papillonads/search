@@ -610,7 +610,7 @@ exports[`<ListCarPage /> Render must match regular() 1`] = `
             >
               <select
                 className="select-menu width-full"
-                id={null}
+                id="S3"
                 onChange={[Function]}
                 readOnly={false}
                 value="Select Year"
