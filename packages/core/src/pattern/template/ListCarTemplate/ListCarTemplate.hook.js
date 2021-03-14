@@ -3,16 +3,12 @@ import { getSelectedItemText } from '@papillonads/library/array'
 import { paginate } from '@papillonads/library/pagination'
 import { useBindActionCreators } from '../../../store/dispatch'
 import { eventKey, messageType, pageContent } from '../../../library/constant'
-import { alertTextApp } from '../../../library/constant/alertText/app'
 import { alertTextListCars } from '../../../library/constant/alertText/listCars'
 
 export function useListCarState() {
   const {
     uiCreateListCarsAction,
-    uiUpdateListCarsAction,
-    uiDeleteListCarsAction,
     uiSelectListCarsAction,
-    uiSetListCarsEditAction,
     uiSetListCarsSortAction,
     uiSetListCarsSearchAction,
     uiSetListCarsPaginationAction,
@@ -35,10 +31,6 @@ export function useListCarState() {
     pageSize,
     pageNumber,
   })
-
-  const selectedObjects = paginatedRandomCarsObjects.filter(({ isSelected }) => isSelected === true)
-
-  const selectedObjectsLicenseList = selectedObjects.map(({ license }) => `${license}`).join('\n')
 
   const paginatedRandomCarsObjectsNamesValues = paginatedRandomCarsObjects.map((carsObject) =>
     (({ id, isSelected, license, brand, model, year, bodywork, color, fuel, transmission, ...rest }) => ({
@@ -70,21 +62,6 @@ export function useListCarState() {
       }),
     }))(carsObject),
   )
-
-  function isValidCostCalculationValue({ value }) {
-    if (value.length === 0) {
-      contextSetProgressRegularThunk({ message: { text: alertTextApp.validation.mustNotBeEmpty, type: messageType.warning } })
-      return false
-    }
-
-    // eslint-disable-next-line
-    if (isNaN(value)) {
-      contextSetProgressRegularThunk({ message: { text: alertTextApp.validation.mustBeNumber, type: messageType.warning } })
-      return false
-    }
-
-    return true
-  }
 
   /* istanbul ignore next */
   function searchBrandOnChange(newBrand) {
@@ -170,74 +147,7 @@ export function useListCarState() {
   }
 
   /* istanbul ignore next */
-  function editObjectLicenseOnChange(event) {
-    uiSetListCarsEditAction({ ...edit, license: event.target.value })
-  }
-
-  /* istanbul ignore next */
-  function editObjectBodyworkOnChange(newBodywork) {
-    uiSetListCarsEditAction({ ...edit, bodywork: newBodywork.items })
-  }
-
-  /* istanbul ignore next */
-  function editObjectBrandOnChange(newBrand) {
-    uiSetListCarsEditAction({ ...edit, brand: newBrand.items })
-  }
-
-  /* istanbul ignore next */
-  function editObjectModelOnChange(newModel) {
-    uiSetListCarsEditAction({ ...edit, model: newModel.items })
-  }
-
-  /* istanbul ignore next */
-  function editObjectColorOnChange(newColor) {
-    uiSetListCarsEditAction({ ...edit, color: newColor.items })
-  }
-
-  /* istanbul ignore next */
-  function editObjectFuelOnChange(newFuel) {
-    uiSetListCarsEditAction({ ...edit, fuel: newFuel.items })
-  }
-
-  /* istanbul ignore next */
-  function editObjectTransmissionOnChange(newTransmission) {
-    uiSetListCarsEditAction({ ...edit, transmission: newTransmission.items })
-  }
-
-  /* istanbul ignore next */
-  function editObjectYearOnChange(newYear) {
-    uiSetListCarsEditAction({ ...edit, year: newYear.items })
-  }
-
-  /* istanbul ignore next */
-  function editObjectPriceOnChange(event) {
-    if (!isValidCostCalculationValue({ value: event.target.value })) {
-      return
-    }
-
-    uiSetListCarsEditAction({ ...edit, price: parseInt(event.target.value, 10) })
-  }
-
-  /* istanbul ignore next */
-  function editObjectConsumptionOnChange(event) {
-    if (!isValidCostCalculationValue({ value: event.target.value })) {
-      return
-    }
-
-    uiSetListCarsEditAction({ ...edit, consumption: parseInt(event.target.value, 10) })
-  }
-
-  /* istanbul ignore next */
-  function editObjectMaintenanceOnChange(event) {
-    if (!isValidCostCalculationValue({ value: event.target.value })) {
-      return
-    }
-
-    uiSetListCarsEditAction({ ...edit, maintenance: parseInt(event.target.value, 10) })
-  }
-
-  /* istanbul ignore next */
-  function createObjectButtonOnClick() {
+  function searchCarsButtonOnClick() {
     if (!edit.license) {
       contextSetProgressRegularThunk({
         message: { text: alertTextListCars.action.create.validation.emptyLicense, type: messageType.warning },
@@ -271,91 +181,11 @@ export function useListCarState() {
     })
   }
 
-  /* istanbul ignore next */
-  function updateObjectButtonOnClick() {
-    if (selectedObjects.length > 1) {
-      contextSetProgressRegularThunk({
-        message: { text: alertTextListCars.action.update.validation.singleCar, type: messageType.warning },
-      })
-      return
-    }
-
-    if (selectedObjects.length === 0) {
-      contextSetProgressRegularThunk({
-        message: { text: alertTextListCars.action.update.validation.nothingSelected, type: messageType.warning },
-      })
-      return
-    }
-
-    if (!edit?.license) {
-      contextSetProgressRegularThunk({
-        message: { text: alertTextListCars.action.update.validation.emptyLicense, type: messageType.warning },
-      })
-      return
-    }
-
-    if (carsObjects.some(({ id, license }) => id !== edit.id && license === edit.license)) {
-      contextSetProgressRegularThunk({
-        message: { text: alertTextListCars.action.update.validation.sameLicense(edit.license), type: messageType.warning },
-      })
-      return
-    }
-
-    contextSetProgressConsentThunk({
-      message: { text: alertTextListCars.action.update.consent.question(edit.license), type: messageType.consent },
-      isLoading: true,
-      consent: {
-        action: {
-          approve: () => {
-            uiUpdateListCarsAction()
-            contextSetProgressRegularThunk({ message: { text: alertTextListCars.action.update.success, type: messageType.success } })
-          },
-          cancel: () => {
-            contextSetProgressRegularThunk({
-              message: { text: alertTextListCars.action.update.consent.cancel, type: messageType.warning },
-            })
-          },
-        },
-      },
-    })
-  }
-
-  /* istanbul ignore next */
-  function deleteObjectButtonOnClick() {
-    if (selectedObjects.length === 0) {
-      contextSetProgressRegularThunk({
-        message: { text: alertTextListCars.action.delete.validation.nothingSelected, type: messageType.warning },
-      })
-      return
-    }
-
-    if (selectedObjectsLicenseList) {
-      contextSetProgressConsentThunk({
-        message: { text: alertTextListCars.action.delete.consent.question(selectedObjectsLicenseList), type: messageType.consent },
-        isLoading: true,
-        consent: {
-          action: {
-            approve: () => {
-              uiDeleteListCarsAction({ selectedObjects })
-              contextSetProgressRegularThunk({ message: { text: alertTextListCars.action.delete.success, type: messageType.success } })
-            },
-            cancel: () => {
-              contextSetProgressRegularThunk({
-                message: { text: alertTextListCars.action.delete.consent.cancel, type: messageType.warning },
-              })
-            },
-          },
-        },
-      })
-    }
-  }
-
   return {
     alertTextListCars,
     pageContent,
     progress,
     currentPage,
-    edit,
     sort,
     search,
     paginatedRandomCarsObjectsNamesValues,
@@ -369,19 +199,6 @@ export function useListCarState() {
     paginationOnClick,
     carsObjectsFlexGridOnChange,
     carsObjectsFlexGridOnClick,
-    editObjectLicenseOnChange,
-    editObjectBodyworkOnChange,
-    editObjectBrandOnChange,
-    editObjectModelOnChange,
-    editObjectColorOnChange,
-    editObjectFuelOnChange,
-    editObjectTransmissionOnChange,
-    editObjectYearOnChange,
-    editObjectPriceOnChange,
-    editObjectConsumptionOnChange,
-    editObjectMaintenanceOnChange,
-    createObjectButtonOnClick,
-    updateObjectButtonOnClick,
-    deleteObjectButtonOnClick,
+    searchCarsButtonOnClick,
   }
 }

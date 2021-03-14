@@ -1,6 +1,4 @@
 import React from 'react'
-import { getSelectedItemText } from '@papillonads/library/array'
-import { getLocaleDateTimeString } from '@papillonads/library/date'
 import { primer } from '@papillonads/components'
 import { Navigator } from '../../molecule/Navigator'
 import { defaultProps, propTypes } from './ListCarTemplate.prop'
@@ -13,18 +11,11 @@ import {
   contentDisplaySearch,
   contentDisplaySearchPart,
   contentDisplaySearchPartField,
-  contentDisplaySearchPartFieldSelect,
+  contentDisplaySearchPartFieldButton,
   contentDisplaySearchPartFieldInput,
+  contentDisplaySearchPartFieldSelect,
   contentDisplayGridListCars,
   contentDisplayPagination,
-  contentDisplayEdit,
-  contentDisplayEditField,
-  contentDisplayEditFieldLabel,
-  contentDisplayEditFieldSelect,
-  contentDisplayEditFieldInput,
-  contentDisplayAction,
-  contentDisplayActionGroup,
-  contentDisplayActionGroupButton,
 } from './ListCarTemplate.scss'
 
 export function ListCarTemplate() {
@@ -36,7 +27,6 @@ export function ListCarTemplate() {
     },
     Grid: { FlexGrid, flexGridSelection, flexGridState },
     Icon: { iconName },
-    Label,
     Pagination: { PreviousNext, previousNextState },
     Select: { Select, selectState },
   } = primer
@@ -48,7 +38,6 @@ export function ListCarTemplate() {
     },
     progress,
     currentPage,
-    edit,
     sort,
     search,
     paginatedRandomCarsObjectsNamesValues,
@@ -62,20 +51,7 @@ export function ListCarTemplate() {
     paginationOnClick,
     carsObjectsFlexGridOnChange,
     carsObjectsFlexGridOnClick,
-    editObjectLicenseOnChange,
-    editObjectBodyworkOnChange,
-    editObjectBrandOnChange,
-    editObjectModelOnChange,
-    editObjectColorOnChange,
-    editObjectFuelOnChange,
-    editObjectTransmissionOnChange,
-    editObjectYearOnChange,
-    editObjectPriceOnChange,
-    editObjectConsumptionOnChange,
-    editObjectMaintenanceOnChange,
-    createObjectButtonOnClick,
-    updateObjectButtonOnClick,
-    deleteObjectButtonOnClick,
+    searchCarsButtonOnClick,
   } = useListCarState()
 
   return (
@@ -122,8 +98,6 @@ export function ListCarTemplate() {
                   state={progress.isLoading ? inputState.inactive : inputState.active}
                 />
               </div>
-            </div>
-            <div className={contentDisplaySearchPart}>
               <div className={contentDisplaySearchPartField}>
                 <Select
                   className={contentDisplaySearchPartFieldSelect}
@@ -131,6 +105,16 @@ export function ListCarTemplate() {
                   items={search?.year}
                   onChange={searchYearOnChange}
                   state={progress.isLoading ? selectState.inactive : selectState.active}
+                />
+              </div>
+              <div className={contentDisplaySearchPartField}>
+                <Button
+                  className={contentDisplaySearchPartFieldButton}
+                  text="Search Cars"
+                  icon={{ alignment: iconAlignment.left, name: iconName.Search16 }}
+                  variant={buttonVariant.primary}
+                  onClick={searchCarsButtonOnClick}
+                  state={progress.isLoading ? buttonState.inactive : buttonState.active}
                 />
               </div>
             </div>
@@ -166,170 +150,6 @@ export function ListCarTemplate() {
             onClick={paginationOnClick}
             state={progress.isLoading ? previousNextState.inactive : previousNextState.active}
           />
-          <div className={contentDisplayEdit}>
-            <div>
-              <div className={contentDisplayEditField}>
-                <Label className={contentDisplayEditFieldLabel} text="License Plate Number" />
-                <Input
-                  className={contentDisplayEditFieldInput}
-                  value={edit?.license || ''}
-                  placeholder="Edit license plate"
-                  ariaAttr={{ label: 'Type in a license plate' }}
-                  onChange={editObjectLicenseOnChange}
-                  state={progress.isLoading ? inputState.inactive : inputState.active}
-                />
-              </div>
-              <div className={contentDisplayEditField}>
-                <Label className={contentDisplayEditFieldLabel} text="Brand (Make)" />
-                <Select
-                  className={contentDisplayEditFieldSelect}
-                  selectedText={getSelectedItemText({ items: edit?.brand })}
-                  items={edit?.brand}
-                  onChange={editObjectBrandOnChange}
-                  state={progress.isLoading ? selectState.inactive : selectState.active}
-                />
-              </div>
-              <div className={contentDisplayEditField}>
-                <Label className={contentDisplayEditFieldLabel} text="Model" />
-                <Select
-                  className={contentDisplayEditFieldSelect}
-                  selectedText={getSelectedItemText({ items: edit?.model })}
-                  items={edit?.model}
-                  onChange={editObjectModelOnChange}
-                  state={progress.isLoading ? selectState.inactive : selectState.active}
-                />
-              </div>
-              <div className={contentDisplayEditField}>
-                <Label className={contentDisplayEditFieldLabel} text="Bodywork" />
-                <Select
-                  className={contentDisplayEditFieldSelect}
-                  selectedText={getSelectedItemText({ items: edit?.bodywork })}
-                  items={edit?.bodywork}
-                  onChange={editObjectBodyworkOnChange}
-                  state={progress.isLoading ? selectState.inactive : selectState.active}
-                />
-              </div>
-              <div className={contentDisplayEditField}>
-                <Label className={contentDisplayEditFieldLabel} text="Color" />
-                <Select
-                  className={contentDisplayEditFieldSelect}
-                  selectedText={getSelectedItemText({ items: edit?.color })}
-                  items={edit?.color}
-                  onChange={editObjectColorOnChange}
-                  state={progress.isLoading ? selectState.inactive : selectState.active}
-                />
-              </div>
-              <div className={contentDisplayEditField}>
-                <Label className={contentDisplayEditFieldLabel} text="Fuel Type" />
-                <Select
-                  className={contentDisplayEditFieldSelect}
-                  selectedText={getSelectedItemText({ items: edit?.fuel })}
-                  items={edit?.fuel}
-                  onChange={editObjectFuelOnChange}
-                  state={progress.isLoading ? selectState.inactive : selectState.active}
-                />
-              </div>
-              <div className={contentDisplayEditField}>
-                <Label className={contentDisplayEditFieldLabel} text="Transmission" />
-                <Select
-                  className={contentDisplayEditFieldSelect}
-                  selectedText={getSelectedItemText({ items: edit?.transmission })}
-                  items={edit?.transmission}
-                  onChange={editObjectTransmissionOnChange}
-                  state={progress.isLoading ? selectState.inactive : selectState.active}
-                />
-              </div>
-            </div>
-            <div>
-              <div className={contentDisplayEditField}>
-                <Label className={contentDisplayEditFieldLabel} text="Year" />
-                <Select
-                  className={contentDisplayEditFieldSelect}
-                  selectedText={getSelectedItemText({ items: edit?.year })}
-                  items={edit?.year}
-                  onChange={editObjectYearOnChange}
-                  state={progress.isLoading ? selectState.inactive : selectState.active}
-                />
-              </div>
-              <div className={contentDisplayEditField}>
-                <Label className={contentDisplayEditFieldLabel} text="Price (€)" />
-                <Input
-                  className={contentDisplayEditFieldInput}
-                  value={edit?.price || 0}
-                  placeholder="Edit price"
-                  ariaAttr={{ label: 'Type in a price' }}
-                  onChange={editObjectPriceOnChange}
-                  state={progress.isLoading ? inputState.inactive : inputState.active}
-                />
-              </div>
-              <div className={contentDisplayEditField}>
-                <Label className={contentDisplayEditFieldLabel} text="Fuel Consumption (L)" />
-                <Input
-                  className={contentDisplayEditFieldInput}
-                  value={edit?.consumption || 0}
-                  placeholder="Edit fuel consumption"
-                  ariaAttr={{ label: 'Type in a fuel consumption' }}
-                  onChange={editObjectConsumptionOnChange}
-                  state={progress.isLoading ? inputState.inactive : inputState.active}
-                />
-              </div>
-              <div className={contentDisplayEditField}>
-                <Label className={contentDisplayEditFieldLabel} text="Annual Maintenance Cost (€)" />
-                <Input
-                  className={contentDisplayEditFieldInput}
-                  value={edit?.maintenance || 0}
-                  placeholder="Edit maintenance cost "
-                  ariaAttr={{ label: 'Type in a maintenance cost' }}
-                  onChange={editObjectMaintenanceOnChange}
-                  state={progress.isLoading ? inputState.inactive : inputState.active}
-                />
-              </div>
-              <div className={contentDisplayEditField}>
-                <Label className={contentDisplayEditFieldLabel} text="Date Modified" />
-                <Input
-                  className={contentDisplayEditFieldInput}
-                  value={getLocaleDateTimeString(edit?.modified) || ''}
-                  state={inputState.inactive}
-                />
-              </div>
-              <div className={contentDisplayEditField}>
-                <Label className={contentDisplayEditFieldLabel} text="Date Created" />
-                <Input
-                  className={contentDisplayEditFieldInput}
-                  value={getLocaleDateTimeString(edit?.created) || ''}
-                  state={inputState.inactive}
-                />
-              </div>
-            </div>
-          </div>
-          <div className={contentDisplayAction}>
-            <div className={contentDisplayActionGroup}>
-              <Button
-                className={contentDisplayActionGroupButton}
-                text="Create Car"
-                icon={{ alignment: iconAlignment.left, name: iconName.Plus16 }}
-                variant={buttonVariant.primary}
-                onClick={createObjectButtonOnClick}
-                state={progress.isLoading ? buttonState.inactive : buttonState.active}
-              />
-              <Button
-                className={contentDisplayActionGroupButton}
-                text="Update Car"
-                icon={{ alignment: iconAlignment.left, name: iconName.Pencil16 }}
-                variant={buttonVariant.primary}
-                onClick={updateObjectButtonOnClick}
-                state={progress.isLoading ? buttonState.inactive : buttonState.active}
-              />
-              <Button
-                className={contentDisplayActionGroupButton}
-                text="Delete Car(s)"
-                icon={{ alignment: iconAlignment.left, name: iconName.Trashcan16 }}
-                variant={buttonVariant.danger}
-                onClick={deleteObjectButtonOnClick}
-                state={progress.isLoading ? buttonState.inactive : buttonState.active}
-              />
-            </div>
-          </div>
         </div>
       </div>
       <Alert className={alert} variant={progress.message.type} consent={progress?.consent}>

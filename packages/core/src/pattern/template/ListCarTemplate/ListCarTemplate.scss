@@ -30,7 +30,7 @@
       }
 
       &Part {
-        width: 100%;
+        width: 50%;
 
         &Field {
           display: flex;
@@ -44,14 +44,18 @@
             margin-bottom: 15px;
           }
 
-          &Select {
-            select {
-              width: 100%;
-            }
+          &Button {
+            width: 100%;
           }
 
           &Input {
             width: 100%;
+          }
+
+          &Select {
+            select {
+              width: 100%;
+            }
           }
         }
       }
@@ -60,75 +64,7 @@
     &Pagination {
       display: flex;
       justify-content: flex-start;
-      margin: 0;
-
-      @include breakpoint(md) {
-        justify-content: flex-end;
-      }
-    }
-
-    &Edit {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      margin-top: 10px;
-
-      @include breakpoint(xl) {
-        flex-direction: row;
-      }
-
-      &Field {
-        display: flex;
-        margin-top: 5px;
-
-        &Label {
-          margin-right: 5px;
-          padding: 5px;
-          border-radius: 6px;
-          min-width: 325px;
-        }
-
-        &Select {
-          select {
-            min-width: 325px;
-          }
-        }
-
-        &Input {
-          min-width: 325px;
-        }
-      }
-    }
-
-    &Action {
-      margin-top: 25px;
-      display: flex;
-      justify-content: space-between;
-
-      &Group {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-
-        @include breakpoint(lg) {
-          flex-direction: row;
-          align-items: space-between;
-        }
-
-        &Button {
-          width: 100%;
-          margin: 0 0 1em 0;
-          min-width: 300px;
-
-          @include breakpoint(lg) {
-            margin: 0 1em 1em 0;
-
-            &:last-child {
-              margin: 0 0 1em 0;
-            }
-          }
-        }
-      }
+      margin-top: 0;
     }
   }
 }
