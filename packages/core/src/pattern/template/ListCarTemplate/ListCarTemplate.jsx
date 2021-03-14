@@ -11,8 +11,8 @@ import {
   contentDisplaySearch,
   contentDisplaySearchPart,
   contentDisplaySearchPartField,
-  contentDisplaySearchPartFieldButton,
   contentDisplaySearchPartFieldInput,
+  contentDisplaySearchPartFieldLabel,
   contentDisplaySearchPartFieldSelect,
   contentDisplayGridListCars,
   contentDisplayPagination,
@@ -27,6 +27,7 @@ export function ListCarTemplate() {
     },
     Grid: { FlexGrid, flexGridSelection, flexGridState },
     Icon: { iconName },
+    Label,
     Pagination: { PreviousNext, previousNextState },
     Select: { Select, selectState },
   } = primer
@@ -66,6 +67,7 @@ export function ListCarTemplate() {
           <div className={contentDisplaySearch}>
             <div className={contentDisplaySearchPart}>
               <div className={contentDisplaySearchPartField}>
+                <Label className={contentDisplaySearchPartFieldLabel} text="Brand:" />
                 <Select
                   id="S1"
                   className={contentDisplaySearchPartFieldSelect}
@@ -76,6 +78,7 @@ export function ListCarTemplate() {
                 />
               </div>
               <div className={contentDisplaySearchPartField}>
+                <Label className={contentDisplaySearchPartFieldLabel} text="Model:" />
                 <Select
                   id="S2"
                   className={contentDisplaySearchPartFieldSelect}
@@ -85,7 +88,10 @@ export function ListCarTemplate() {
                   state={progress.isLoading ? selectState.inactive : selectState.active}
                 />
               </div>
+            </div>
+            <div className={contentDisplaySearchPart}>
               <div className={contentDisplaySearchPartField}>
+                <Label className={contentDisplaySearchPartFieldLabel} text="Keywords:" />
                 <Input
                   id="T"
                   value={search.license || ''}
@@ -100,6 +106,7 @@ export function ListCarTemplate() {
                 />
               </div>
               <div className={contentDisplaySearchPartField}>
+                <Label className={contentDisplaySearchPartFieldLabel} text="Year:" />
                 <Select
                   id="S3"
                   className={contentDisplaySearchPartFieldSelect}
@@ -109,19 +116,16 @@ export function ListCarTemplate() {
                   state={progress.isLoading ? selectState.inactive : selectState.active}
                 />
               </div>
-              <div className={contentDisplaySearchPartField}>
-                <Button
-                  id="B"
-                  className={contentDisplaySearchPartFieldButton}
-                  text="Search Cars"
-                  icon={{ alignment: iconAlignment.left, name: iconName.Search16 }}
-                  variant={buttonVariant.primary}
-                  onClick={searchCarsButtonOnClick}
-                  state={isSearchEnabled ? buttonState.active : buttonState.inactive}
-                />
-              </div>
             </div>
           </div>
+          <Button
+            id="B"
+            text="Search Cars"
+            icon={{ alignment: iconAlignment.left, name: iconName.Search16 }}
+            variant={buttonVariant.primary}
+            onClick={searchCarsButtonOnClick}
+            state={isSearchEnabled ? buttonState.active : buttonState.inactive}
+          />
           {paginatedRandomCarsObjectsNamesValues?.length === 0 && (
             <Alert className={alert} variant={alertVariant.warning}>
               {alertTextListCars.display.noCars}

@@ -30,7 +30,7 @@
       }
 
       &Part {
-        width: 50%;
+        width: 100%;
 
         &Field {
           display: flex;
@@ -44,12 +44,15 @@
             margin-bottom: 15px;
           }
 
-          &Button {
+          &Input {
             width: 100%;
           }
 
-          &Input {
-            width: 100%;
+          &Label {
+            margin-right: 5px;
+            padding: 5px;
+            border-radius: 6px;
+            min-width: 325px;
           }
 
           &Select {
