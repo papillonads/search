@@ -35,10 +35,10 @@ module.exports = {
   moduleFileExtensions: ['js', 'jsx'],
   coverageThreshold: {
     global: {
-      statements: 90,
-      branches: 62,
-      functions: 89,
-      lines: 90,
+      statements: 96,
+      branches: 66,
+      functions: 90,
+      lines: 96,
     },
   },
   preset: process.env.NODE_ENV === 'test' ? null : 'jest-puppeteer',
