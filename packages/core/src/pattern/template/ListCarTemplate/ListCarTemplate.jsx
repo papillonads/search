@@ -53,6 +53,7 @@ export function ListCarTemplate() {
     search,
     paginatedRandomCarsObjectsNamesValues,
     searchBrandOnChange,
+    searchModelOnChange,
     searchYearOnChange,
     searchLicenseOnChange,
     searchLicenseOnKeyUp,
@@ -94,6 +95,16 @@ export function ListCarTemplate() {
                   selectedText={search?.brand?.find(({ isSelected }) => isSelected === true)?.text}
                   items={search?.brand}
                   onChange={searchBrandOnChange}
+                  state={progress.isLoading ? selectState.inactive : selectState.active}
+                />
+              </div>
+              <div className={contentDisplaySearchPartField}>
+                <Select
+                  id="S2"
+                  className={contentDisplaySearchPartFieldSelect}
+                  selectedText={search?.model?.find(({ isSelected }) => isSelected === true)?.text}
+                  items={search?.model}
+                  onChange={searchModelOnChange}
                   state={progress.isLoading ? selectState.inactive : selectState.active}
                 />
               </div>

@@ -88,18 +88,24 @@ export function useListCarState() {
 
   /* istanbul ignore next */
   function searchBrandOnChange(newBrand) {
-    uiSetListCarsSearchAction({ brand: newBrand.items, year: search.year, license: search.license })
+    uiSetListCarsSearchAction({ brand: newBrand.items, model: null, year: search.year, license: search.license })
+  }
+
+  /* istanbul ignore next */
+  function searchModelOnChange(newModel) {
+    uiSetListCarsSearchAction({ brand: search.brand, model: newModel.items, year: search.year, license: search.license })
   }
 
   /* istanbul ignore next */
   function searchYearOnChange(newYear) {
-    uiSetListCarsSearchAction({ brand: search.brand, year: newYear.items, license: search.license })
+    uiSetListCarsSearchAction({ brand: search.brand, model: search.model, year: newYear.items, license: search.license })
   }
 
   /* istanbul ignore next */
   function searchLicenseOnChange(event) {
     uiSetListCarsSearchAction({
       brand: search.brand,
+      model: search.model,
       year: search.year,
       license: event.target.value,
     })
@@ -110,6 +116,7 @@ export function useListCarState() {
     if (event.key === eventKey.enter) {
       uiSetListCarsSearchAction({
         brand: search.brand,
+        model: search.model,
         year: search.year,
         license: event.target.value,
       })
@@ -118,6 +125,7 @@ export function useListCarState() {
     if (event.key === eventKey.escape) {
       uiSetListCarsSearchAction({
         brand: search.brand,
+        model: search.model,
         year: search.year,
         license: null,
       })
@@ -126,6 +134,7 @@ export function useListCarState() {
 
     uiSetListCarsSearchAction({
       brand: search.brand,
+      model: search.model,
       year: search.year,
       license: search.license,
     })
@@ -135,6 +144,7 @@ export function useListCarState() {
   function searchLicenseOnFocus() {
     uiSetListCarsSearchAction({
       brand: search.brand,
+      model: search.model,
       year: search.year,
       license: search.license,
     })
@@ -350,6 +360,7 @@ export function useListCarState() {
     search,
     paginatedRandomCarsObjectsNamesValues,
     searchBrandOnChange,
+    searchModelOnChange,
     searchYearOnChange,
     searchLicenseOnChange,
     searchLicenseOnKeyUp,
