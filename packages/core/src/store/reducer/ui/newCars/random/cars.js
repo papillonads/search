@@ -1,12 +1,8 @@
-import { getCurrentIndex, getIndexItems, getRange, getSelectedItem, getItemsDefaultSelected } from '@papillonads/library/array'
+import { getCurrentIndex, getIndexItems, getRange, getItemsDefaultSelected } from '@papillonads/library/array'
 import { sortDefault, sortObjects } from '@papillonads/library/sort'
 import { getRandomCarsObjects } from './carsObjects'
 import { pageSize, pageNumber, maxRange } from '../../../../../library/constant'
 import { carBrands, carBrandsDefault } from '../../../../../library/constant/carBrands'
-import { carBodyworks } from '../../../../../library/constant/carBodyworks'
-import { carColors } from '../../../../../library/constant/carColors'
-import { carFuels } from '../../../../../library/constant/carFuels'
-import { carTransmissions } from '../../../../../library/constant/carTransmissions'
 import { carYears, carYearsDefault } from '../../../../../library/constant/carYears'
 
 export function getNewCars() {
@@ -44,14 +40,5 @@ export function getNewCars() {
       carsObjects: null,
     },
     sort: sortDefault,
-    edit: {
-      brand: getItemsDefaultSelected({ items: carBrands }),
-      model: getItemsDefaultSelected({ items: getSelectedItem({ items: getItemsDefaultSelected({ items: carBrands }) }).models }),
-      bodywork: getItemsDefaultSelected({ items: carBodyworks }),
-      color: getItemsDefaultSelected({ items: carColors }),
-      fuel: getItemsDefaultSelected({ items: carFuels }),
-      transmission: getItemsDefaultSelected({ items: carTransmissions }),
-      year: getItemsDefaultSelected({ items: carYears }),
-    },
   }
 }
