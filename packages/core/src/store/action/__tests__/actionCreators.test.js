@@ -1,11 +1,7 @@
 import {
   contextSetNavigationAction,
   contextSetProgressAction,
-  uiCreateListCarsAction,
-  uiUpdateListCarsAction,
-  uiDeleteListCarsAction,
   uiSelectListCarsAction,
-  uiSetListCarsEditAction,
   uiSetListCarsSortAction,
   uiSetListCarsSearchAction,
   uiSetListCarsPaginationAction,
@@ -34,33 +30,9 @@ describe('actionCreators', () => {
 
   describe('ui', () => {
     describe('listCars', () => {
-      describe('uiCreateListCarsAction()', () => {
-        test('must return action with given payload', () => {
-          expect(uiCreateListCarsAction(payload)).toMatchObject({ type: 'UI_CREATE_LIST_CARS', payload })
-        })
-      })
-
-      describe('uiUpdateListCarsAction()', () => {
-        test('must return action with given payload', () => {
-          expect(uiUpdateListCarsAction(payload)).toMatchObject({ type: 'UI_UPDATE_LIST_CARS', payload })
-        })
-      })
-
-      describe('uiDeleteListCarsAction()', () => {
-        test('must return action with given payload', () => {
-          expect(uiDeleteListCarsAction(payload)).toMatchObject({ type: 'UI_DELETE_LIST_CARS', payload })
-        })
-      })
-
       describe('uiSelectListCarsAction()', () => {
         test('must return action with given payload', () => {
           expect(uiSelectListCarsAction(payload)).toMatchObject({ type: 'UI_SELECT_LIST_CARS', payload })
-        })
-      })
-
-      describe('uiSetListCarsEditAction()', () => {
-        test('must return action with given payload', () => {
-          expect(uiSetListCarsEditAction(payload)).toMatchObject({ type: 'UI_SET_LIST_CARS_EDIT', payload })
         })
       })
 
