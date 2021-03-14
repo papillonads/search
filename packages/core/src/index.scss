@@ -1,0 +1,19 @@
+@mixin container {
+  padding: 0 5em;
+}
+
+@mixin navigator {
+  display: flex;
+  flex-direction: column;
+  @include breakpoint(lg) {
+    flex-direction: row;
+  }
+
+  justify-content: space-between;
+  padding-top: 10px;
+
+  &Heading {
+    min-width: 250px;
+    text-align: center;
+  }
+}
