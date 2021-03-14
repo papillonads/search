@@ -89,402 +89,480 @@ exports[`<ListCarTemplate /> Render must match regular() 1`] = `
             className="contentDisplaySearchPartField"
           >
             <div
-              className="contentDisplaySearchPartFieldDropdown select"
+              className="contentDisplaySearchPartFieldSelect select"
             >
               <select
                 className="select-menu width-full"
-                id={null}
+                id="S1"
                 onChange={[Function]}
                 readOnly={false}
                 value="Select Car Brand"
               >
                 <option
-                  value={0}
+                  selected={true}
+                  value="Select Car Brand"
                 >
                   Select Car Brand
                 </option>
                 <option
-                  value={1}
+                  selected={true}
+                  value="Abarth"
                 >
                   Abarth
                 </option>
                 <option
-                  value={2}
+                  selected={false}
+                  value="Aixam"
                 >
                   Aixam
                 </option>
                 <option
-                  value={3}
+                  selected={false}
+                  value="Alfa Romeo"
                 >
                   Alfa Romeo
                 </option>
                 <option
-                  value={4}
+                  selected={false}
+                  value="Alpina"
                 >
                   Alpina
                 </option>
                 <option
-                  value={5}
+                  selected={false}
+                  value="Alpine"
                 >
                   Alpine
                 </option>
                 <option
-                  value={6}
+                  selected={false}
+                  value="Aston Martin"
                 >
                   Aston Martin
                 </option>
                 <option
-                  value={7}
+                  selected={false}
+                  value="Audi"
                 >
                   Audi
                 </option>
                 <option
-                  value={8}
+                  selected={false}
+                  value="Austin"
                 >
                   Austin
                 </option>
                 <option
-                  value={9}
+                  selected={false}
+                  value="BMW"
                 >
                   BMW
                 </option>
                 <option
-                  value={10}
+                  selected={false}
+                  value="Bentley"
                 >
                   Bentley
                 </option>
                 <option
-                  value={11}
+                  selected={false}
+                  value="Vans"
                 >
                   Vans
                 </option>
                 <option
-                  value={12}
+                  selected={false}
+                  value="Bugatti"
                 >
                   Bugatti
                 </option>
                 <option
-                  value={13}
+                  selected={false}
+                  value="Buick"
                 >
                   Buick
                 </option>
                 <option
-                  value={14}
+                  selected={false}
+                  value="Cadillac"
                 >
                   Cadillac
                 </option>
                 <option
-                  value={15}
+                  selected={false}
+                  value="Chevrolet"
                 >
                   Chevrolet
                 </option>
                 <option
-                  value={16}
+                  selected={false}
+                  value="Chrysler"
                 >
                   Chrysler
                 </option>
                 <option
-                  value={17}
+                  selected={false}
+                  value="Citroën"
                 >
                   Citroën
                 </option>
                 <option
-                  value={18}
+                  selected={false}
+                  value="DS"
                 >
                   DS
                 </option>
                 <option
-                  value={19}
+                  selected={false}
+                  value="Dacia"
                 >
                   Dacia
                 </option>
                 <option
-                  value={20}
+                  selected={false}
+                  value="Daewoo"
                 >
                   Daewoo
                 </option>
                 <option
-                  value={21}
+                  selected={false}
+                  value="Daihatsu"
                 >
                   Daihatsu
                 </option>
                 <option
-                  value={22}
+                  selected={false}
+                  value="Dodge"
                 >
                   Dodge
                 </option>
                 <option
-                  value={23}
+                  selected={false}
+                  value="Ferrari"
                 >
                   Ferrari
                 </option>
                 <option
-                  value={24}
+                  selected={false}
+                  value="Fiat"
                 >
                   Fiat
                 </option>
                 <option
-                  value={25}
+                  selected={false}
+                  value="Fisker"
                 >
                   Fisker
                 </option>
                 <option
-                  value={26}
+                  selected={false}
+                  value="Ford"
                 >
                   Ford
                 </option>
                 <option
-                  value={27}
+                  selected={false}
+                  value="Ford Usa"
                 >
                   Ford Usa
                 </option>
                 <option
-                  value={28}
+                  selected={false}
+                  value="GMC"
                 >
                   GMC
                 </option>
                 <option
-                  value={29}
+                  selected={false}
+                  value="Honda"
                 >
                   Honda
                 </option>
                 <option
-                  value={30}
+                  selected={false}
+                  value="Hummer"
                 >
                   Hummer
                 </option>
                 <option
-                  value={31}
+                  selected={false}
+                  value="Hyundai"
                 >
                   Hyundai
                 </option>
                 <option
-                  value={32}
+                  selected={false}
+                  value="Infiniti"
                 >
                   Infiniti
                 </option>
                 <option
-                  value={33}
+                  selected={false}
+                  value="Jaguar"
                 >
                   Jaguar
                 </option>
                 <option
-                  value={34}
+                  selected={false}
+                  value="Jeep"
                 >
                   Jeep
                 </option>
                 <option
-                  value={35}
+                  selected={false}
+                  value="Kia"
                 >
                   Kia
                 </option>
                 <option
-                  value={36}
+                  selected={false}
+                  value="Lada"
                 >
                   Lada
                 </option>
                 <option
-                  value={37}
+                  selected={false}
+                  value="Lamborghini"
                 >
                   Lamborghini
                 </option>
                 <option
-                  value={38}
+                  selected={false}
+                  value="Lancia"
                 >
                   Lancia
                 </option>
                 <option
-                  value={39}
+                  selected={false}
+                  value="Land Rover"
                 >
                   Land Rover
                 </option>
                 <option
-                  value={40}
+                  selected={false}
+                  value="Landwind"
                 >
                   Landwind
                 </option>
                 <option
-                  value={41}
+                  selected={false}
+                  value="Lexus"
                 >
                   Lexus
                 </option>
                 <option
-                  value={42}
+                  selected={false}
+                  value="Lincoln"
                 >
                   Lincoln
                 </option>
                 <option
-                  value={43}
+                  selected={false}
+                  value="Lotus"
                 >
                   Lotus
                 </option>
                 <option
-                  value={44}
+                  selected={false}
+                  value="MG"
                 >
                   MG
                 </option>
                 <option
-                  value={45}
+                  selected={false}
+                  value="Maserati"
                 >
                   Maserati
                 </option>
                 <option
-                  value={46}
+                  selected={false}
+                  value="Mazda"
                 >
                   Mazda
                 </option>
                 <option
-                  value={47}
+                  selected={false}
+                  value="McLaren"
                 >
                   McLaren
                 </option>
                 <option
-                  value={48}
+                  selected={false}
+                  value="Mercedes-Benz"
                 >
                   Mercedes-Benz
                 </option>
                 <option
-                  value={49}
+                  selected={false}
+                  value="Mercury"
                 >
                   Mercury
                 </option>
                 <option
-                  value={50}
+                  selected={false}
+                  value="Mini"
                 >
                   Mini
                 </option>
                 <option
-                  value={51}
+                  selected={false}
+                  value="Mitsubishi"
                 >
                   Mitsubishi
                 </option>
                 <option
-                  value={52}
+                  selected={false}
+                  value="Nissan"
                 >
                   Nissan
                 </option>
                 <option
-                  value={53}
+                  selected={false}
+                  value="Oldsmobile"
                 >
                   Oldsmobile
                 </option>
                 <option
-                  value={54}
+                  selected={false}
+                  value="Oldtimers"
                 >
                   Oldtimers
                 </option>
                 <option
-                  value={55}
+                  selected={false}
+                  value="Opel"
                 >
                   Opel
                 </option>
                 <option
-                  value={56}
+                  selected={false}
+                  value="OtherCars"
                 >
                   OtherCars
                 </option>
                 <option
-                  value={57}
+                  selected={false}
+                  value="Peugeot"
                 >
                   Peugeot
                 </option>
                 <option
-                  value={58}
+                  selected={false}
+                  value="Polestar"
                 >
                   Polestar
                 </option>
                 <option
-                  value={59}
+                  selected={false}
+                  value="Pontiac"
                 >
                   Pontiac
                 </option>
                 <option
-                  value={60}
+                  selected={false}
+                  value="Porsche"
                 >
                   Porsche
                 </option>
                 <option
-                  value={61}
+                  selected={false}
+                  value="Renault"
                 >
                   Renault
                 </option>
                 <option
-                  value={62}
+                  selected={false}
+                  value="Rolls-Royce"
                 >
                   Rolls-Royce
                 </option>
                 <option
-                  value={63}
+                  selected={false}
+                  value="Rover"
                 >
                   Rover
                 </option>
                 <option
-                  value={64}
+                  selected={false}
+                  value="Saab"
                 >
                   Saab
                 </option>
                 <option
-                  value={65}
+                  selected={false}
+                  value="Seat"
                 >
                   Seat
                 </option>
                 <option
-                  value={66}
+                  selected={false}
+                  value="Skoda"
                 >
                   Skoda
                 </option>
                 <option
-                  value={67}
+                  selected={false}
+                  value="Smart"
                 >
                   Smart
                 </option>
                 <option
-                  value={68}
+                  selected={false}
+                  value="Spyker"
                 >
                   Spyker
                 </option>
                 <option
-                  value={69}
+                  selected={false}
+                  value="SsangYong"
                 >
                   SsangYong
                 </option>
                 <option
-                  value={70}
+                  selected={false}
+                  value="Subaru"
                 >
                   Subaru
                 </option>
                 <option
-                  value={71}
+                  selected={false}
+                  value="Suzuki"
                 >
                   Suzuki
                 </option>
                 <option
-                  value={72}
+                  selected={false}
+                  value="Tesla"
                 >
                   Tesla
                 </option>
                 <option
-                  value={73}
+                  selected={false}
+                  value="Toyota"
                 >
                   Toyota
                 </option>
                 <option
-                  value={74}
+                  selected={false}
+                  value="Triumph"
                 >
                   Triumph
                 </option>
                 <option
-                  value={75}
+                  selected={false}
+                  value="Volkswagen"
                 >
                   Volkswagen
                 </option>
                 <option
-                  value={76}
+                  selected={false}
+                  value="Volvo"
                 >
                   Volvo
                 </option>
                 <option
-                  value={77}
+                  selected={false}
+                  value="Trucks"
                 >
                   Trucks
                 </option>
@@ -498,7 +576,7 @@ exports[`<ListCarTemplate /> Render must match regular() 1`] = `
               aria-label="Type in license plate"
               className="contentDisplaySearchPartFieldInput form-control"
               data-test={null}
-              id={null}
+              id="T"
               onBlur={[Function]}
               onChange={[Function]}
               onFocus={[Function]}
@@ -516,7 +594,7 @@ exports[`<ListCarTemplate /> Render must match regular() 1`] = `
             className="contentDisplaySearchPartField"
           >
             <div
-              className="contentDisplaySearchPartFieldDropdown select"
+              className="contentDisplaySearchPartFieldSelect select"
             >
               <select
                 className="select-menu width-full"
@@ -526,612 +604,734 @@ exports[`<ListCarTemplate /> Render must match regular() 1`] = `
                 value="Select Year"
               >
                 <option
-                  value={0}
+                  selected={true}
+                  value="Select Year"
                 >
                   Select Year
                 </option>
                 <option
-                  value={1}
+                  selected={true}
+                  value="2020"
                 >
                   2020
                 </option>
                 <option
-                  value={2}
+                  selected={false}
+                  value="2019"
                 >
                   2019
                 </option>
                 <option
-                  value={3}
+                  selected={false}
+                  value="2018"
                 >
                   2018
                 </option>
                 <option
-                  value={4}
+                  selected={false}
+                  value="2017"
                 >
                   2017
                 </option>
                 <option
-                  value={5}
+                  selected={false}
+                  value="2016"
                 >
                   2016
                 </option>
                 <option
-                  value={6}
+                  selected={false}
+                  value="2015"
                 >
                   2015
                 </option>
                 <option
-                  value={7}
+                  selected={false}
+                  value="2014"
                 >
                   2014
                 </option>
                 <option
-                  value={8}
+                  selected={false}
+                  value="2013"
                 >
                   2013
                 </option>
                 <option
-                  value={9}
+                  selected={false}
+                  value="2012"
                 >
                   2012
                 </option>
                 <option
-                  value={10}
+                  selected={false}
+                  value="2011"
                 >
                   2011
                 </option>
                 <option
-                  value={11}
+                  selected={false}
+                  value="2010"
                 >
                   2010
                 </option>
                 <option
-                  value={12}
+                  selected={false}
+                  value="2009"
                 >
                   2009
                 </option>
                 <option
-                  value={13}
+                  selected={false}
+                  value="2008"
                 >
                   2008
                 </option>
                 <option
-                  value={14}
+                  selected={false}
+                  value="2007"
                 >
                   2007
                 </option>
                 <option
-                  value={15}
+                  selected={false}
+                  value="2006"
                 >
                   2006
                 </option>
                 <option
-                  value={16}
+                  selected={false}
+                  value="2005"
                 >
                   2005
                 </option>
                 <option
-                  value={17}
+                  selected={false}
+                  value="2004"
                 >
                   2004
                 </option>
                 <option
-                  value={18}
+                  selected={false}
+                  value="2003"
                 >
                   2003
                 </option>
                 <option
-                  value={19}
+                  selected={false}
+                  value="2002"
                 >
                   2002
                 </option>
                 <option
-                  value={20}
+                  selected={false}
+                  value="2001"
                 >
                   2001
                 </option>
                 <option
-                  value={21}
+                  selected={false}
+                  value="2000"
                 >
                   2000
                 </option>
                 <option
-                  value={22}
+                  selected={false}
+                  value="1999"
                 >
                   1999
                 </option>
                 <option
-                  value={23}
+                  selected={false}
+                  value="1998"
                 >
                   1998
                 </option>
                 <option
-                  value={24}
+                  selected={false}
+                  value="1997"
                 >
                   1997
                 </option>
                 <option
-                  value={25}
+                  selected={false}
+                  value="1996"
                 >
                   1996
                 </option>
                 <option
-                  value={26}
+                  selected={false}
+                  value="1995"
                 >
                   1995
                 </option>
                 <option
-                  value={27}
+                  selected={false}
+                  value="1994"
                 >
                   1994
                 </option>
                 <option
-                  value={28}
+                  selected={false}
+                  value="1993"
                 >
                   1993
                 </option>
                 <option
-                  value={29}
+                  selected={false}
+                  value="1992"
                 >
                   1992
                 </option>
                 <option
-                  value={30}
+                  selected={false}
+                  value="1991"
                 >
                   1991
                 </option>
                 <option
-                  value={31}
+                  selected={false}
+                  value="1990"
                 >
                   1990
                 </option>
                 <option
-                  value={32}
+                  selected={false}
+                  value="1989"
                 >
                   1989
                 </option>
                 <option
-                  value={33}
+                  selected={false}
+                  value="1988"
                 >
                   1988
                 </option>
                 <option
-                  value={34}
+                  selected={false}
+                  value="1987"
                 >
                   1987
                 </option>
                 <option
-                  value={35}
+                  selected={false}
+                  value="1986"
                 >
                   1986
                 </option>
                 <option
-                  value={36}
+                  selected={false}
+                  value="1985"
                 >
                   1985
                 </option>
                 <option
-                  value={37}
+                  selected={false}
+                  value="1984"
                 >
                   1984
                 </option>
                 <option
-                  value={38}
+                  selected={false}
+                  value="1983"
                 >
                   1983
                 </option>
                 <option
-                  value={39}
+                  selected={false}
+                  value="1982"
                 >
                   1982
                 </option>
                 <option
-                  value={40}
+                  selected={false}
+                  value="1981"
                 >
                   1981
                 </option>
                 <option
-                  value={41}
+                  selected={false}
+                  value="1980"
                 >
                   1980
                 </option>
                 <option
-                  value={42}
+                  selected={false}
+                  value="1979"
                 >
                   1979
                 </option>
                 <option
-                  value={43}
+                  selected={false}
+                  value="1978"
                 >
                   1978
                 </option>
                 <option
-                  value={44}
+                  selected={false}
+                  value="1977"
                 >
                   1977
                 </option>
                 <option
-                  value={45}
+                  selected={false}
+                  value="1976"
                 >
                   1976
                 </option>
                 <option
-                  value={46}
+                  selected={false}
+                  value="1975"
                 >
                   1975
                 </option>
                 <option
-                  value={47}
+                  selected={false}
+                  value="1974"
                 >
                   1974
                 </option>
                 <option
-                  value={48}
+                  selected={false}
+                  value="1973"
                 >
                   1973
                 </option>
                 <option
-                  value={49}
+                  selected={false}
+                  value="1972"
                 >
                   1972
                 </option>
                 <option
-                  value={50}
+                  selected={false}
+                  value="1971"
                 >
                   1971
                 </option>
                 <option
-                  value={51}
+                  selected={false}
+                  value="1970"
                 >
                   1970
                 </option>
                 <option
-                  value={52}
+                  selected={false}
+                  value="1969"
                 >
                   1969
                 </option>
                 <option
-                  value={53}
+                  selected={false}
+                  value="1968"
                 >
                   1968
                 </option>
                 <option
-                  value={54}
+                  selected={false}
+                  value="1967"
                 >
                   1967
                 </option>
                 <option
-                  value={55}
+                  selected={false}
+                  value="1966"
                 >
                   1966
                 </option>
                 <option
-                  value={56}
+                  selected={false}
+                  value="1965"
                 >
                   1965
                 </option>
                 <option
-                  value={57}
+                  selected={false}
+                  value="1964"
                 >
                   1964
                 </option>
                 <option
-                  value={58}
+                  selected={false}
+                  value="1963"
                 >
                   1963
                 </option>
                 <option
-                  value={59}
+                  selected={false}
+                  value="1962"
                 >
                   1962
                 </option>
                 <option
-                  value={60}
+                  selected={false}
+                  value="1961"
                 >
                   1961
                 </option>
                 <option
-                  value={61}
+                  selected={false}
+                  value="1960"
                 >
                   1960
                 </option>
                 <option
-                  value={62}
+                  selected={false}
+                  value="1959"
                 >
                   1959
                 </option>
                 <option
-                  value={63}
+                  selected={false}
+                  value="1958"
                 >
                   1958
                 </option>
                 <option
-                  value={64}
+                  selected={false}
+                  value="1957"
                 >
                   1957
                 </option>
                 <option
-                  value={65}
+                  selected={false}
+                  value="1956"
                 >
                   1956
                 </option>
                 <option
-                  value={66}
+                  selected={false}
+                  value="1955"
                 >
                   1955
                 </option>
                 <option
-                  value={67}
+                  selected={false}
+                  value="1954"
                 >
                   1954
                 </option>
                 <option
-                  value={68}
+                  selected={false}
+                  value="1953"
                 >
                   1953
                 </option>
                 <option
-                  value={69}
+                  selected={false}
+                  value="1952"
                 >
                   1952
                 </option>
                 <option
-                  value={70}
+                  selected={false}
+                  value="1951"
                 >
                   1951
                 </option>
                 <option
-                  value={71}
+                  selected={false}
+                  value="1950"
                 >
                   1950
                 </option>
                 <option
-                  value={72}
+                  selected={false}
+                  value="1949"
                 >
                   1949
                 </option>
                 <option
-                  value={73}
+                  selected={false}
+                  value="1948"
                 >
                   1948
                 </option>
                 <option
-                  value={74}
+                  selected={false}
+                  value="1947"
                 >
                   1947
                 </option>
                 <option
-                  value={75}
+                  selected={false}
+                  value="1946"
                 >
                   1946
                 </option>
                 <option
-                  value={76}
+                  selected={false}
+                  value="1945"
                 >
                   1945
                 </option>
                 <option
-                  value={77}
+                  selected={false}
+                  value="1944"
                 >
                   1944
                 </option>
                 <option
-                  value={78}
+                  selected={false}
+                  value="1943"
                 >
                   1943
                 </option>
                 <option
-                  value={79}
+                  selected={false}
+                  value="1942"
                 >
                   1942
                 </option>
                 <option
-                  value={80}
+                  selected={false}
+                  value="1941"
                 >
                   1941
                 </option>
                 <option
-                  value={81}
+                  selected={false}
+                  value="1940"
                 >
                   1940
                 </option>
                 <option
-                  value={82}
+                  selected={false}
+                  value="1939"
                 >
                   1939
                 </option>
                 <option
-                  value={83}
+                  selected={false}
+                  value="1938"
                 >
                   1938
                 </option>
                 <option
-                  value={84}
+                  selected={false}
+                  value="1937"
                 >
                   1937
                 </option>
                 <option
-                  value={85}
+                  selected={false}
+                  value="1936"
                 >
                   1936
                 </option>
                 <option
-                  value={86}
+                  selected={false}
+                  value="1935"
                 >
                   1935
                 </option>
                 <option
-                  value={87}
+                  selected={false}
+                  value="1934"
                 >
                   1934
                 </option>
                 <option
-                  value={88}
+                  selected={false}
+                  value="1933"
                 >
                   1933
                 </option>
                 <option
-                  value={89}
+                  selected={false}
+                  value="1932"
                 >
                   1932
                 </option>
                 <option
-                  value={90}
+                  selected={false}
+                  value="1931"
                 >
                   1931
                 </option>
                 <option
-                  value={91}
+                  selected={false}
+                  value="1930"
                 >
                   1930
                 </option>
                 <option
-                  value={92}
+                  selected={false}
+                  value="1929"
                 >
                   1929
                 </option>
                 <option
-                  value={93}
+                  selected={false}
+                  value="1928"
                 >
                   1928
                 </option>
                 <option
-                  value={94}
+                  selected={false}
+                  value="1927"
                 >
                   1927
                 </option>
                 <option
-                  value={95}
+                  selected={false}
+                  value="1926"
                 >
                   1926
                 </option>
                 <option
-                  value={96}
+                  selected={false}
+                  value="1925"
                 >
                   1925
                 </option>
                 <option
-                  value={97}
+                  selected={false}
+                  value="1924"
                 >
                   1924
                 </option>
                 <option
-                  value={98}
+                  selected={false}
+                  value="1923"
                 >
                   1923
                 </option>
                 <option
-                  value={99}
+                  selected={false}
+                  value="1922"
                 >
                   1922
                 </option>
                 <option
-                  value={100}
+                  selected={false}
+                  value="1921"
                 >
                   1921
                 </option>
                 <option
-                  value={101}
+                  selected={false}
+                  value="1920"
                 >
                   1920
                 </option>
                 <option
-                  value={102}
+                  selected={false}
+                  value="1919"
                 >
                   1919
                 </option>
                 <option
-                  value={103}
+                  selected={false}
+                  value="1918"
                 >
                   1918
                 </option>
                 <option
-                  value={104}
+                  selected={false}
+                  value="1917"
                 >
                   1917
                 </option>
                 <option
-                  value={105}
+                  selected={false}
+                  value="1916"
                 >
                   1916
                 </option>
                 <option
-                  value={106}
+                  selected={false}
+                  value="1915"
                 >
                   1915
                 </option>
                 <option
-                  value={107}
+                  selected={false}
+                  value="1914"
                 >
                   1914
                 </option>
                 <option
-                  value={108}
+                  selected={false}
+                  value="1913"
                 >
                   1913
                 </option>
                 <option
-                  value={109}
+                  selected={false}
+                  value="1912"
                 >
                   1912
                 </option>
                 <option
-                  value={110}
+                  selected={false}
+                  value="1911"
                 >
                   1911
                 </option>
                 <option
-                  value={111}
+                  selected={false}
+                  value="1910"
                 >
                   1910
                 </option>
                 <option
-                  value={112}
+                  selected={false}
+                  value="1909"
                 >
                   1909
                 </option>
                 <option
-                  value={113}
+                  selected={false}
+                  value="1908"
                 >
                   1908
                 </option>
                 <option
-                  value={114}
+                  selected={false}
+                  value="1907"
                 >
                   1907
                 </option>
                 <option
-                  value={115}
+                  selected={false}
+                  value="1906"
                 >
                   1906
                 </option>
                 <option
-                  value={116}
+                  selected={false}
+                  value="1905"
                 >
                   1905
                 </option>
                 <option
-                  value={117}
+                  selected={false}
+                  value="1904"
                 >
                   1904
                 </option>
                 <option
-                  value={118}
+                  selected={false}
+                  value="1903"
                 >
                   1903
                 </option>
                 <option
-                  value={119}
+                  selected={false}
+                  value="1902"
                 >
                   1902
                 </option>
                 <option
-                  value={120}
+                  selected={false}
+                  value="1901"
                 >
                   1901
                 </option>
                 <option
-                  value={121}
+                  selected={false}
+                  value="1900"
                 >
                   1900
                 </option>
@@ -2305,7 +2505,7 @@ exports[`<ListCarTemplate /> Render must match regular() 1`] = `
               Brand (Make)
             </span>
             <div
-              className="contentDisplayEditFieldDropdown select"
+              className="contentDisplayEditFieldSelect select"
             >
               <select
                 className="select-menu width-full"
@@ -2315,387 +2515,464 @@ exports[`<ListCarTemplate /> Render must match regular() 1`] = `
                 value="Abarth"
               >
                 <option
-                  value={0}
+                  selected={true}
+                  value="Abarth"
                 >
                   Abarth
                 </option>
                 <option
-                  value={1}
+                  selected={false}
+                  value="Aixam"
                 >
                   Aixam
                 </option>
                 <option
-                  value={2}
+                  selected={false}
+                  value="Alfa Romeo"
                 >
                   Alfa Romeo
                 </option>
                 <option
-                  value={3}
+                  selected={false}
+                  value="Alpina"
                 >
                   Alpina
                 </option>
                 <option
-                  value={4}
+                  selected={false}
+                  value="Alpine"
                 >
                   Alpine
                 </option>
                 <option
-                  value={5}
+                  selected={false}
+                  value="Aston Martin"
                 >
                   Aston Martin
                 </option>
                 <option
-                  value={6}
+                  selected={false}
+                  value="Audi"
                 >
                   Audi
                 </option>
                 <option
-                  value={7}
+                  selected={false}
+                  value="Austin"
                 >
                   Austin
                 </option>
                 <option
-                  value={8}
+                  selected={false}
+                  value="BMW"
                 >
                   BMW
                 </option>
                 <option
-                  value={9}
+                  selected={false}
+                  value="Bentley"
                 >
                   Bentley
                 </option>
                 <option
-                  value={10}
+                  selected={false}
+                  value="Vans"
                 >
                   Vans
                 </option>
                 <option
-                  value={11}
+                  selected={false}
+                  value="Bugatti"
                 >
                   Bugatti
                 </option>
                 <option
-                  value={12}
+                  selected={false}
+                  value="Buick"
                 >
                   Buick
                 </option>
                 <option
-                  value={13}
+                  selected={false}
+                  value="Cadillac"
                 >
                   Cadillac
                 </option>
                 <option
-                  value={14}
+                  selected={false}
+                  value="Chevrolet"
                 >
                   Chevrolet
                 </option>
                 <option
-                  value={15}
+                  selected={false}
+                  value="Chrysler"
                 >
                   Chrysler
                 </option>
                 <option
-                  value={16}
+                  selected={false}
+                  value="Citroën"
                 >
                   Citroën
                 </option>
                 <option
-                  value={17}
+                  selected={false}
+                  value="DS"
                 >
                   DS
                 </option>
                 <option
-                  value={18}
+                  selected={false}
+                  value="Dacia"
                 >
                   Dacia
                 </option>
                 <option
-                  value={19}
+                  selected={false}
+                  value="Daewoo"
                 >
                   Daewoo
                 </option>
                 <option
-                  value={20}
+                  selected={false}
+                  value="Daihatsu"
                 >
                   Daihatsu
                 </option>
                 <option
-                  value={21}
+                  selected={false}
+                  value="Dodge"
                 >
                   Dodge
                 </option>
                 <option
-                  value={22}
+                  selected={false}
+                  value="Ferrari"
                 >
                   Ferrari
                 </option>
                 <option
-                  value={23}
+                  selected={false}
+                  value="Fiat"
                 >
                   Fiat
                 </option>
                 <option
-                  value={24}
+                  selected={false}
+                  value="Fisker"
                 >
                   Fisker
                 </option>
                 <option
-                  value={25}
+                  selected={false}
+                  value="Ford"
                 >
                   Ford
                 </option>
                 <option
-                  value={26}
+                  selected={false}
+                  value="Ford Usa"
                 >
                   Ford Usa
                 </option>
                 <option
-                  value={27}
+                  selected={false}
+                  value="GMC"
                 >
                   GMC
                 </option>
                 <option
-                  value={28}
+                  selected={false}
+                  value="Honda"
                 >
                   Honda
                 </option>
                 <option
-                  value={29}
+                  selected={false}
+                  value="Hummer"
                 >
                   Hummer
                 </option>
                 <option
-                  value={30}
+                  selected={false}
+                  value="Hyundai"
                 >
                   Hyundai
                 </option>
                 <option
-                  value={31}
+                  selected={false}
+                  value="Infiniti"
                 >
                   Infiniti
                 </option>
                 <option
-                  value={32}
+                  selected={false}
+                  value="Jaguar"
                 >
                   Jaguar
                 </option>
                 <option
-                  value={33}
+                  selected={false}
+                  value="Jeep"
                 >
                   Jeep
                 </option>
                 <option
-                  value={34}
+                  selected={false}
+                  value="Kia"
                 >
                   Kia
                 </option>
                 <option
-                  value={35}
+                  selected={false}
+                  value="Lada"
                 >
                   Lada
                 </option>
                 <option
-                  value={36}
+                  selected={false}
+                  value="Lamborghini"
                 >
                   Lamborghini
                 </option>
                 <option
-                  value={37}
+                  selected={false}
+                  value="Lancia"
                 >
                   Lancia
                 </option>
                 <option
-                  value={38}
+                  selected={false}
+                  value="Land Rover"
                 >
                   Land Rover
                 </option>
                 <option
-                  value={39}
+                  selected={false}
+                  value="Landwind"
                 >
                   Landwind
                 </option>
                 <option
-                  value={40}
+                  selected={false}
+                  value="Lexus"
                 >
                   Lexus
                 </option>
                 <option
-                  value={41}
+                  selected={false}
+                  value="Lincoln"
                 >
                   Lincoln
                 </option>
                 <option
-                  value={42}
+                  selected={false}
+                  value="Lotus"
                 >
                   Lotus
                 </option>
                 <option
-                  value={43}
+                  selected={false}
+                  value="MG"
                 >
                   MG
                 </option>
                 <option
-                  value={44}
+                  selected={false}
+                  value="Maserati"
                 >
                   Maserati
                 </option>
                 <option
-                  value={45}
+                  selected={false}
+                  value="Mazda"
                 >
                   Mazda
                 </option>
                 <option
-                  value={46}
+                  selected={false}
+                  value="McLaren"
                 >
                   McLaren
                 </option>
                 <option
-                  value={47}
+                  selected={false}
+                  value="Mercedes-Benz"
                 >
                   Mercedes-Benz
                 </option>
                 <option
-                  value={48}
+                  selected={false}
+                  value="Mercury"
                 >
                   Mercury
                 </option>
                 <option
-                  value={49}
+                  selected={false}
+                  value="Mini"
                 >
                   Mini
                 </option>
                 <option
-                  value={50}
+                  selected={false}
+                  value="Mitsubishi"
                 >
                   Mitsubishi
                 </option>
                 <option
-                  value={51}
+                  selected={false}
+                  value="Nissan"
                 >
                   Nissan
                 </option>
                 <option
-                  value={52}
+                  selected={false}
+                  value="Oldsmobile"
                 >
                   Oldsmobile
                 </option>
                 <option
-                  value={53}
+                  selected={false}
+                  value="Oldtimers"
                 >
                   Oldtimers
                 </option>
                 <option
-                  value={54}
+                  selected={false}
+                  value="Opel"
                 >
                   Opel
                 </option>
                 <option
-                  value={55}
+                  selected={false}
+                  value="OtherCars"
                 >
                   OtherCars
                 </option>
                 <option
-                  value={56}
+                  selected={false}
+                  value="Peugeot"
                 >
                   Peugeot
                 </option>
                 <option
-                  value={57}
+                  selected={false}
+                  value="Polestar"
                 >
                   Polestar
                 </option>
                 <option
-                  value={58}
+                  selected={false}
+                  value="Pontiac"
                 >
                   Pontiac
                 </option>
                 <option
-                  value={59}
+                  selected={false}
+                  value="Porsche"
                 >
                   Porsche
                 </option>
                 <option
-                  value={60}
+                  selected={false}
+                  value="Renault"
                 >
                   Renault
                 </option>
                 <option
-                  value={61}
+                  selected={false}
+                  value="Rolls-Royce"
                 >
                   Rolls-Royce
                 </option>
                 <option
-                  value={62}
+                  selected={false}
+                  value="Rover"
                 >
                   Rover
                 </option>
                 <option
-                  value={63}
+                  selected={false}
+                  value="Saab"
                 >
                   Saab
                 </option>
                 <option
-                  value={64}
+                  selected={false}
+                  value="Seat"
                 >
                   Seat
                 </option>
                 <option
-                  value={65}
+                  selected={false}
+                  value="Skoda"
                 >
                   Skoda
                 </option>
                 <option
-                  value={66}
+                  selected={false}
+                  value="Smart"
                 >
                   Smart
                 </option>
                 <option
-                  value={67}
+                  selected={false}
+                  value="Spyker"
                 >
                   Spyker
                 </option>
                 <option
-                  value={68}
+                  selected={false}
+                  value="SsangYong"
                 >
                   SsangYong
                 </option>
                 <option
-                  value={69}
+                  selected={false}
+                  value="Subaru"
                 >
                   Subaru
                 </option>
                 <option
-                  value={70}
+                  selected={false}
+                  value="Suzuki"
                 >
                   Suzuki
                 </option>
                 <option
-                  value={71}
+                  selected={false}
+                  value="Tesla"
                 >
                   Tesla
                 </option>
                 <option
-                  value={72}
+                  selected={false}
+                  value="Toyota"
                 >
                   Toyota
                 </option>
                 <option
-                  value={73}
+                  selected={false}
+                  value="Triumph"
                 >
                   Triumph
                 </option>
                 <option
-                  value={74}
+                  selected={false}
+                  value="Volkswagen"
                 >
                   Volkswagen
                 </option>
                 <option
-                  value={75}
+                  selected={false}
+                  value="Volvo"
                 >
                   Volvo
                 </option>
                 <option
-                  value={76}
+                  selected={false}
+                  value="Trucks"
                 >
                   Trucks
                 </option>
@@ -2712,7 +2989,7 @@ exports[`<ListCarTemplate /> Render must match regular() 1`] = `
               Model
             </span>
             <div
-              className="contentDisplayEditFieldDropdown select"
+              className="contentDisplayEditFieldSelect select"
             >
               <select
                 className="select-menu width-full"
@@ -2722,17 +2999,20 @@ exports[`<ListCarTemplate /> Render must match regular() 1`] = `
                 value="500"
               >
                 <option
-                  value={0}
+                  selected={true}
+                  value="500"
                 >
                   500
                 </option>
                 <option
-                  value={1}
+                  selected={false}
+                  value="500C"
                 >
                   500C
                 </option>
                 <option
-                  value={2}
+                  selected={false}
+                  value="Other models"
                 >
                   Other models
                 </option>
@@ -2749,7 +3029,7 @@ exports[`<ListCarTemplate /> Render must match regular() 1`] = `
               Bodywork
             </span>
             <div
-              className="contentDisplayEditFieldDropdown select"
+              className="contentDisplayEditFieldSelect select"
             >
               <select
                 className="select-menu width-full"
@@ -2759,42 +3039,50 @@ exports[`<ListCarTemplate /> Render must match regular() 1`] = `
                 value="Hatchback"
               >
                 <option
-                  value={0}
+                  selected={true}
+                  value="Hatchback"
                 >
                   Hatchback
                 </option>
                 <option
-                  value={1}
+                  selected={false}
+                  value="MPV"
                 >
                   MPV
                 </option>
                 <option
-                  value={2}
+                  selected={false}
+                  value="Sedan"
                 >
                   Sedan
                 </option>
                 <option
-                  value={3}
+                  selected={false}
+                  value="Station wagon"
                 >
                   Station wagon
                 </option>
                 <option
-                  value={4}
+                  selected={false}
+                  value="Convertible"
                 >
                   Convertible
                 </option>
                 <option
-                  value={5}
+                  selected={false}
+                  value="Coupé"
                 >
                   Coupé
                 </option>
                 <option
-                  value={6}
+                  selected={false}
+                  value="SUV"
                 >
                   SUV
                 </option>
                 <option
-                  value={7}
+                  selected={false}
+                  value="Other bodyworks"
                 >
                   Other bodyworks
                 </option>
@@ -2811,7 +3099,7 @@ exports[`<ListCarTemplate /> Render must match regular() 1`] = `
               Color
             </span>
             <div
-              className="contentDisplayEditFieldDropdown select"
+              className="contentDisplayEditFieldSelect select"
             >
               <select
                 className="select-menu width-full"
@@ -2821,47 +3109,56 @@ exports[`<ListCarTemplate /> Render must match regular() 1`] = `
                 value="Blue"
               >
                 <option
-                  value={0}
+                  selected={true}
+                  value="Blue"
                 >
                   Blue
                 </option>
                 <option
-                  value={1}
+                  selected={false}
+                  value="Red"
                 >
                   Red
                 </option>
                 <option
-                  value={2}
+                  selected={false}
+                  value="Silver or Gray"
                 >
                   Silver or Gray
                 </option>
                 <option
-                  value={3}
+                  selected={false}
+                  value="Black"
                 >
                   Black
                 </option>
                 <option
-                  value={4}
+                  selected={false}
+                  value="Beige"
                 >
                   Beige
                 </option>
                 <option
-                  value={5}
+                  selected={false}
+                  value="Brown"
                 >
                   Brown
                 </option>
                 <option
-                  value={6}
+                  selected={false}
+                  value="Green"
                 >
                   Green
                 </option>
                 <option
-                  value={7}
+                  selected={false}
+                  value="White"
                 >
                   White
                 </option>
                 <option
-                  value={8}
+                  selected={false}
+                  value="Other colors"
                 >
                   Other colors
                 </option>
@@ -2878,7 +3175,7 @@ exports[`<ListCarTemplate /> Render must match regular() 1`] = `
               Fuel Type
             </span>
             <div
-              className="contentDisplayEditFieldDropdown select"
+              className="contentDisplayEditFieldSelect select"
             >
               <select
                 className="select-menu width-full"
@@ -2888,32 +3185,38 @@ exports[`<ListCarTemplate /> Render must match regular() 1`] = `
                 value="Gasoline"
               >
                 <option
-                  value={0}
+                  selected={true}
+                  value="Gasoline"
                 >
                   Gasoline
                 </option>
                 <option
-                  value={1}
+                  selected={false}
+                  value="Diesel"
                 >
                   Diesel
                 </option>
                 <option
-                  value={2}
+                  selected={false}
+                  value="Electric"
                 >
                   Electric
                 </option>
                 <option
-                  value={3}
+                  selected={false}
+                  value="Hybrid"
                 >
                   Hybrid
                 </option>
                 <option
-                  value={4}
+                  selected={false}
+                  value="LPG"
                 >
                   LPG
                 </option>
                 <option
-                  value={5}
+                  selected={false}
+                  value="Other fuels"
                 >
                   Other fuels
                 </option>
@@ -2930,7 +3233,7 @@ exports[`<ListCarTemplate /> Render must match regular() 1`] = `
               Transmission
             </span>
             <div
-              className="contentDisplayEditFieldDropdown select"
+              className="contentDisplayEditFieldSelect select"
             >
               <select
                 className="select-menu width-full"
@@ -2940,12 +3243,14 @@ exports[`<ListCarTemplate /> Render must match regular() 1`] = `
                 value="Automatic"
               >
                 <option
-                  value={0}
+                  selected={true}
+                  value="Automatic"
                 >
                   Automatic
                 </option>
                 <option
-                  value={1}
+                  selected={false}
+                  value="Manual"
                 >
                   Manual
                 </option>
@@ -2964,7 +3269,7 @@ exports[`<ListCarTemplate /> Render must match regular() 1`] = `
               Year
             </span>
             <div
-              className="contentDisplayEditFieldDropdown select"
+              className="contentDisplayEditFieldSelect select"
             >
               <select
                 className="select-menu width-full"
@@ -2974,607 +3279,728 @@ exports[`<ListCarTemplate /> Render must match regular() 1`] = `
                 value="2020"
               >
                 <option
-                  value={0}
+                  selected={true}
+                  value="2020"
                 >
                   2020
                 </option>
                 <option
-                  value={1}
+                  selected={false}
+                  value="2019"
                 >
                   2019
                 </option>
                 <option
-                  value={2}
+                  selected={false}
+                  value="2018"
                 >
                   2018
                 </option>
                 <option
-                  value={3}
+                  selected={false}
+                  value="2017"
                 >
                   2017
                 </option>
                 <option
-                  value={4}
+                  selected={false}
+                  value="2016"
                 >
                   2016
                 </option>
                 <option
-                  value={5}
+                  selected={false}
+                  value="2015"
                 >
                   2015
                 </option>
                 <option
-                  value={6}
+                  selected={false}
+                  value="2014"
                 >
                   2014
                 </option>
                 <option
-                  value={7}
+                  selected={false}
+                  value="2013"
                 >
                   2013
                 </option>
                 <option
-                  value={8}
+                  selected={false}
+                  value="2012"
                 >
                   2012
                 </option>
                 <option
-                  value={9}
+                  selected={false}
+                  value="2011"
                 >
                   2011
                 </option>
                 <option
-                  value={10}
+                  selected={false}
+                  value="2010"
                 >
                   2010
                 </option>
                 <option
-                  value={11}
+                  selected={false}
+                  value="2009"
                 >
                   2009
                 </option>
                 <option
-                  value={12}
+                  selected={false}
+                  value="2008"
                 >
                   2008
                 </option>
                 <option
-                  value={13}
+                  selected={false}
+                  value="2007"
                 >
                   2007
                 </option>
                 <option
-                  value={14}
+                  selected={false}
+                  value="2006"
                 >
                   2006
                 </option>
                 <option
-                  value={15}
+                  selected={false}
+                  value="2005"
                 >
                   2005
                 </option>
                 <option
-                  value={16}
+                  selected={false}
+                  value="2004"
                 >
                   2004
                 </option>
                 <option
-                  value={17}
+                  selected={false}
+                  value="2003"
                 >
                   2003
                 </option>
                 <option
-                  value={18}
+                  selected={false}
+                  value="2002"
                 >
                   2002
                 </option>
                 <option
-                  value={19}
+                  selected={false}
+                  value="2001"
                 >
                   2001
                 </option>
                 <option
-                  value={20}
+                  selected={false}
+                  value="2000"
                 >
                   2000
                 </option>
                 <option
-                  value={21}
+                  selected={false}
+                  value="1999"
                 >
                   1999
                 </option>
                 <option
-                  value={22}
+                  selected={false}
+                  value="1998"
                 >
                   1998
                 </option>
                 <option
-                  value={23}
+                  selected={false}
+                  value="1997"
                 >
                   1997
                 </option>
                 <option
-                  value={24}
+                  selected={false}
+                  value="1996"
                 >
                   1996
                 </option>
                 <option
-                  value={25}
+                  selected={false}
+                  value="1995"
                 >
                   1995
                 </option>
                 <option
-                  value={26}
+                  selected={false}
+                  value="1994"
                 >
                   1994
                 </option>
                 <option
-                  value={27}
+                  selected={false}
+                  value="1993"
                 >
                   1993
                 </option>
                 <option
-                  value={28}
+                  selected={false}
+                  value="1992"
                 >
                   1992
                 </option>
                 <option
-                  value={29}
+                  selected={false}
+                  value="1991"
                 >
                   1991
                 </option>
                 <option
-                  value={30}
+                  selected={false}
+                  value="1990"
                 >
                   1990
                 </option>
                 <option
-                  value={31}
+                  selected={false}
+                  value="1989"
                 >
                   1989
                 </option>
                 <option
-                  value={32}
+                  selected={false}
+                  value="1988"
                 >
                   1988
                 </option>
                 <option
-                  value={33}
+                  selected={false}
+                  value="1987"
                 >
                   1987
                 </option>
                 <option
-                  value={34}
+                  selected={false}
+                  value="1986"
                 >
                   1986
                 </option>
                 <option
-                  value={35}
+                  selected={false}
+                  value="1985"
                 >
                   1985
                 </option>
                 <option
-                  value={36}
+                  selected={false}
+                  value="1984"
                 >
                   1984
                 </option>
                 <option
-                  value={37}
+                  selected={false}
+                  value="1983"
                 >
                   1983
                 </option>
                 <option
-                  value={38}
+                  selected={false}
+                  value="1982"
                 >
                   1982
                 </option>
                 <option
-                  value={39}
+                  selected={false}
+                  value="1981"
                 >
                   1981
                 </option>
                 <option
-                  value={40}
+                  selected={false}
+                  value="1980"
                 >
                   1980
                 </option>
                 <option
-                  value={41}
+                  selected={false}
+                  value="1979"
                 >
                   1979
                 </option>
                 <option
-                  value={42}
+                  selected={false}
+                  value="1978"
                 >
                   1978
                 </option>
                 <option
-                  value={43}
+                  selected={false}
+                  value="1977"
                 >
                   1977
                 </option>
                 <option
-                  value={44}
+                  selected={false}
+                  value="1976"
                 >
                   1976
                 </option>
                 <option
-                  value={45}
+                  selected={false}
+                  value="1975"
                 >
                   1975
                 </option>
                 <option
-                  value={46}
+                  selected={false}
+                  value="1974"
                 >
                   1974
                 </option>
                 <option
-                  value={47}
+                  selected={false}
+                  value="1973"
                 >
                   1973
                 </option>
                 <option
-                  value={48}
+                  selected={false}
+                  value="1972"
                 >
                   1972
                 </option>
                 <option
-                  value={49}
+                  selected={false}
+                  value="1971"
                 >
                   1971
                 </option>
                 <option
-                  value={50}
+                  selected={false}
+                  value="1970"
                 >
                   1970
                 </option>
                 <option
-                  value={51}
+                  selected={false}
+                  value="1969"
                 >
                   1969
                 </option>
                 <option
-                  value={52}
+                  selected={false}
+                  value="1968"
                 >
                   1968
                 </option>
                 <option
-                  value={53}
+                  selected={false}
+                  value="1967"
                 >
                   1967
                 </option>
                 <option
-                  value={54}
+                  selected={false}
+                  value="1966"
                 >
                   1966
                 </option>
                 <option
-                  value={55}
+                  selected={false}
+                  value="1965"
                 >
                   1965
                 </option>
                 <option
-                  value={56}
+                  selected={false}
+                  value="1964"
                 >
                   1964
                 </option>
                 <option
-                  value={57}
+                  selected={false}
+                  value="1963"
                 >
                   1963
                 </option>
                 <option
-                  value={58}
+                  selected={false}
+                  value="1962"
                 >
                   1962
                 </option>
                 <option
-                  value={59}
+                  selected={false}
+                  value="1961"
                 >
                   1961
                 </option>
                 <option
-                  value={60}
+                  selected={false}
+                  value="1960"
                 >
                   1960
                 </option>
                 <option
-                  value={61}
+                  selected={false}
+                  value="1959"
                 >
                   1959
                 </option>
                 <option
-                  value={62}
+                  selected={false}
+                  value="1958"
                 >
                   1958
                 </option>
                 <option
-                  value={63}
+                  selected={false}
+                  value="1957"
                 >
                   1957
                 </option>
                 <option
-                  value={64}
+                  selected={false}
+                  value="1956"
                 >
                   1956
                 </option>
                 <option
-                  value={65}
+                  selected={false}
+                  value="1955"
                 >
                   1955
                 </option>
                 <option
-                  value={66}
+                  selected={false}
+                  value="1954"
                 >
                   1954
                 </option>
                 <option
-                  value={67}
+                  selected={false}
+                  value="1953"
                 >
                   1953
                 </option>
                 <option
-                  value={68}
+                  selected={false}
+                  value="1952"
                 >
                   1952
                 </option>
                 <option
-                  value={69}
+                  selected={false}
+                  value="1951"
                 >
                   1951
                 </option>
                 <option
-                  value={70}
+                  selected={false}
+                  value="1950"
                 >
                   1950
                 </option>
                 <option
-                  value={71}
+                  selected={false}
+                  value="1949"
                 >
                   1949
                 </option>
                 <option
-                  value={72}
+                  selected={false}
+                  value="1948"
                 >
                   1948
                 </option>
                 <option
-                  value={73}
+                  selected={false}
+                  value="1947"
                 >
                   1947
                 </option>
                 <option
-                  value={74}
+                  selected={false}
+                  value="1946"
                 >
                   1946
                 </option>
                 <option
-                  value={75}
+                  selected={false}
+                  value="1945"
                 >
                   1945
                 </option>
                 <option
-                  value={76}
+                  selected={false}
+                  value="1944"
                 >
                   1944
                 </option>
                 <option
-                  value={77}
+                  selected={false}
+                  value="1943"
                 >
                   1943
                 </option>
                 <option
-                  value={78}
+                  selected={false}
+                  value="1942"
                 >
                   1942
                 </option>
                 <option
-                  value={79}
+                  selected={false}
+                  value="1941"
                 >
                   1941
                 </option>
                 <option
-                  value={80}
+                  selected={false}
+                  value="1940"
                 >
                   1940
                 </option>
                 <option
-                  value={81}
+                  selected={false}
+                  value="1939"
                 >
                   1939
                 </option>
                 <option
-                  value={82}
+                  selected={false}
+                  value="1938"
                 >
                   1938
                 </option>
                 <option
-                  value={83}
+                  selected={false}
+                  value="1937"
                 >
                   1937
                 </option>
                 <option
-                  value={84}
+                  selected={false}
+                  value="1936"
                 >
                   1936
                 </option>
                 <option
-                  value={85}
+                  selected={false}
+                  value="1935"
                 >
                   1935
                 </option>
                 <option
-                  value={86}
+                  selected={false}
+                  value="1934"
                 >
                   1934
                 </option>
                 <option
-                  value={87}
+                  selected={false}
+                  value="1933"
                 >
                   1933
                 </option>
                 <option
-                  value={88}
+                  selected={false}
+                  value="1932"
                 >
                   1932
                 </option>
                 <option
-                  value={89}
+                  selected={false}
+                  value="1931"
                 >
                   1931
                 </option>
                 <option
-                  value={90}
+                  selected={false}
+                  value="1930"
                 >
                   1930
                 </option>
                 <option
-                  value={91}
+                  selected={false}
+                  value="1929"
                 >
                   1929
                 </option>
                 <option
-                  value={92}
+                  selected={false}
+                  value="1928"
                 >
                   1928
                 </option>
                 <option
-                  value={93}
+                  selected={false}
+                  value="1927"
                 >
                   1927
                 </option>
                 <option
-                  value={94}
+                  selected={false}
+                  value="1926"
                 >
                   1926
                 </option>
                 <option
-                  value={95}
+                  selected={false}
+                  value="1925"
                 >
                   1925
                 </option>
                 <option
-                  value={96}
+                  selected={false}
+                  value="1924"
                 >
                   1924
                 </option>
                 <option
-                  value={97}
+                  selected={false}
+                  value="1923"
                 >
                   1923
                 </option>
                 <option
-                  value={98}
+                  selected={false}
+                  value="1922"
                 >
                   1922
                 </option>
                 <option
-                  value={99}
+                  selected={false}
+                  value="1921"
                 >
                   1921
                 </option>
                 <option
-                  value={100}
+                  selected={false}
+                  value="1920"
                 >
                   1920
                 </option>
                 <option
-                  value={101}
+                  selected={false}
+                  value="1919"
                 >
                   1919
                 </option>
                 <option
-                  value={102}
+                  selected={false}
+                  value="1918"
                 >
                   1918
                 </option>
                 <option
-                  value={103}
+                  selected={false}
+                  value="1917"
                 >
                   1917
                 </option>
                 <option
-                  value={104}
+                  selected={false}
+                  value="1916"
                 >
                   1916
                 </option>
                 <option
-                  value={105}
+                  selected={false}
+                  value="1915"
                 >
                   1915
                 </option>
                 <option
-                  value={106}
+                  selected={false}
+                  value="1914"
                 >
                   1914
                 </option>
                 <option
-                  value={107}
+                  selected={false}
+                  value="1913"
                 >
                   1913
                 </option>
                 <option
-                  value={108}
+                  selected={false}
+                  value="1912"
                 >
                   1912
                 </option>
                 <option
-                  value={109}
+                  selected={false}
+                  value="1911"
                 >
                   1911
                 </option>
                 <option
-                  value={110}
+                  selected={false}
+                  value="1910"
                 >
                   1910
                 </option>
                 <option
-                  value={111}
+                  selected={false}
+                  value="1909"
                 >
                   1909
                 </option>
                 <option
-                  value={112}
+                  selected={false}
+                  value="1908"
                 >
                   1908
                 </option>
                 <option
-                  value={113}
+                  selected={false}
+                  value="1907"
                 >
                   1907
                 </option>
                 <option
-                  value={114}
+                  selected={false}
+                  value="1906"
                 >
                   1906
                 </option>
                 <option
-                  value={115}
+                  selected={false}
+                  value="1905"
                 >
                   1905
                 </option>
                 <option
-                  value={116}
+                  selected={false}
+                  value="1904"
                 >
                   1904
                 </option>
                 <option
-                  value={117}
+                  selected={false}
+                  value="1903"
                 >
                   1903
                 </option>
                 <option
-                  value={118}
+                  selected={false}
+                  value="1902"
                 >
                   1902
                 </option>
                 <option
-                  value={119}
+                  selected={false}
+                  value="1901"
                 >
                   1901
                 </option>
                 <option
-                  value={120}
+                  selected={false}
+                  value="1900"
                 >
                   1900
                 </option>

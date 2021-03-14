@@ -89,6 +89,7 @@ export function ListCarTemplate() {
             <div className={contentDisplaySearchPart}>
               <div className={contentDisplaySearchPartField}>
                 <Select
+                  id="S1"
                   className={contentDisplaySearchPartFieldSelect}
                   selectedText={search?.brand?.find(({ isSelected }) => isSelected === true)?.text}
                   items={search?.brand}
@@ -98,6 +99,7 @@ export function ListCarTemplate() {
               </div>
               <div className={contentDisplaySearchPartField}>
                 <Input
+                  id="T"
                   value={search.license || ''}
                   className={contentDisplaySearchPartFieldInput}
                   placeholder="Type license plate and press Enter to search. Press ESC to clear."
