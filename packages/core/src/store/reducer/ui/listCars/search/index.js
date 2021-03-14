@@ -1,12 +1,23 @@
-import { sortObjects } from '@papillonads/library/sort'
+import { getItemsDefaultSelected } from '@papillonads/library/array'
 import { getPagination } from '@papillonads/library/pagination'
-import { getListCarsObjectsByBrand, getListCarsObjectsByYear, getListCarsObjectsByLicense } from '../get'
+import { sortObjects } from '@papillonads/library/sort'
+import { getListCarsObjectsByBrand, getListCarsObjectsByModel, getListCarsObjectsByYear, getListCarsObjectsByLicense } from '../get'
+import { carBrands, carBrandsDefault } from '../../../../../library/constant/carBrands'
 
 export function getListCarsSearch({ state, action }) {
   let newSearch
 
+  const newSearchBrand = action.payload?.brand ?? state.listCars.search?.brand
+  const newSearchModel =
+    action.payload?.model ??
+    getItemsDefaultSelected({
+      defaultItems: carBrandsDefault[0].models,
+      items: carBrands.find(({ name }) => name === newSearchBrand?.find(({ isSelected }) => isSelected === true)?.text)?.models,
+    })
+
   newSearch = {
-    brand: action.payload?.brand ?? state.listCars.search?.brand,
+    brand: newSearchBrand,
+    model: newSearchModel,
     year: action.payload?.year ?? state.listCars.search?.year,
     license: action.payload?.license ?? state.listCars.search?.license,
     carsObjects:
@@ -19,7 +30,22 @@ export function getListCarsSearch({ state, action }) {
   }
 
   newSearch = {
-    brand: action.payload?.brand ?? state.listCars.search?.brand,
+    brand: newSearchBrand,
+    model: newSearchModel,
+    year: action.payload?.year ?? state.listCars.search?.year,
+    license: action.payload?.license ?? state.listCars.search?.license,
+    carsObjects:
+      !action.payload.model && !state.listCars.search
+        ? newSearch.carsObjects || state.listCars.carsObjects
+        : getListCarsObjectsByModel({
+            objects: newSearch.carsObjects || state.listCars.carsObjects,
+            model: action.payload?.model,
+          }),
+  }
+
+  newSearch = {
+    brand: newSearchBrand,
+    model: newSearchModel,
     year: action.payload?.year ?? state.listCars.search?.year,
     license: action.payload?.license ?? state.listCars.search?.license,
     carsObjects:
@@ -32,7 +58,8 @@ export function getListCarsSearch({ state, action }) {
   }
 
   newSearch = {
-    brand: action.payload?.brand ?? state.listCars.search?.brand,
+    brand: newSearchBrand,
+    model: newSearchModel,
     year: action.payload?.year ?? state.listCars.search?.year,
     license: action.payload?.license ?? state.listCars.search?.license,
     carsObjects:

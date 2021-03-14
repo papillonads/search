@@ -26,6 +26,31 @@ export function getListCarsObjectsByBrand({ objects, brand }) {
   return objectsByBrand?.filter((item, position) => objectsByBrand.indexOf(item) === position)
 }
 
+export function getListCarsObjectsByModel({ objects, model }) {
+  if (!model) {
+    return objects
+  }
+
+  const selectedObjectModelText = model.find(({ isSelected }) => isSelected === true).text
+
+  if (selectedObjectModelText === carBrandsDefault[0].models[0].name) {
+    return objects
+  }
+
+  let objectsByModel = []
+
+  objectsByModel = [
+    ...objectsByModel,
+    ...objects?.filter((filterObject) => {
+      const selectedFilterObjectModelText = filterObject.model.find(({ isSelected }) => isSelected === true).text
+
+      return selectedFilterObjectModelText === selectedObjectModelText
+    }),
+  ]
+
+  return objectsByModel?.filter((item, position) => objectsByModel.indexOf(item) === position)
+}
+
 export function getListCarsObjectsByYear({ objects, year }) {
   if (!year) {
     return objects
