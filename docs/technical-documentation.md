@@ -93,6 +93,10 @@
 
 - [Component](https://github.com/papillonads/papillonads/blob/master/packages/components/src/primer/Select), [Storybook](https://papillonads.github.io/papillonads/?path=/story/primer-atom-select)
 
+### 📖. Subhead
+
+- [Component](https://github.com/papillonads/papillonads/tree/master/packages/components/src/primer/Subhead), [Storybook](https://papillonads.github.io/papillonads/?path=/story/primer-atom-subhead)
+
 ## 📗 CSS Architecture
 
 > CSS architecture is applied using [@papillonads/css](https://github.com/papillonads/papillonads/tree/master/packages/css/src/primer) design tokens and CSS scoping is adressed using `CSS Modules` configured in `webpack` setup.
