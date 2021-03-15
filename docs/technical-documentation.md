@@ -59,15 +59,47 @@
 
 ## 📗 Component Driven Development
 
-> Component driven development is applied using atomic design and uses `@papillonads/components` for atoms and molecules.
+> Component driven development is applied using atomic design and uses the following [@papillonads/components](https://papillonads.github.io/papillonads) for atoms and molecules.
+
+### 📖. Alert
+
+- [Component](https://papillonads.github.io/papillonads/?path=/story/primer-molecule-alert), [Storybook](https://github.com/papillonads/papillonads/tree/master/packages/components/src/primer/Alert)
+
+### 📖. Button
+
+- [Component](https://github.com/papillonads/papillonads/tree/master/packages/components/src/primer/Button), [Storybook](https://papillonads.github.io/papillonads/?path=/story/primer-atom-button)
+
+### 📖. Form Input
+
+- [Component](https://github.com/papillonads/papillonads/tree/master/packages/components/src/primer/Form/Input), [Storybook](https://papillonads.github.io/papillonads/?path=/story/primer-atom-form-input)
+
+### 📖. Grid FlexGrid
+
+- [Component](https://github.com/papillonads/papillonads/tree/master/packages/components/src/primer/Grid/FlexGrid), [Storybook](https://papillonads.github.io/papillonads/?path=/story/primer-molecule-grid-flexgrid)
+
+### 📖. Icon
+
+- [Component](https://github.com/papillonads/papillonads/tree/master/packages/components/src/primer/Icon), [Storybook](https://papillonads.github.io/papillonads/?path=/story/primer-atom-icon--all-icons)
+
+### 📖. Label
+
+- [Component](https://github.com/papillonads/papillonads/tree/master/packages/components/src/primer/Label), [Storybook](https://papillonads.github.io/papillonads/?path=/story/primer-atom-label)
+
+### 📖. Pagination PreviousNext
+
+- [Component](https://github.com/papillonads/papillonads/tree/master/packages/components/src/primer/Pagination/PreviousNext), [Storybook](https://papillonads.github.io/papillonads/?path=/story/primer-atom-pagination-previousnext)
+
+### 📖. Select
+
+- [Component](https://github.com/papillonads/papillonads/blob/master/packages/components/src/primer/Select), [Storybook](https://papillonads.github.io/papillonads/?path=/story/primer-atom-select)
 
 ## 📗 CSS Architecture
 
-> CSS architecture is applied using `@papillonads/css` design tokens and CSS scoping is adressed using `CSS Modules` configured in `webpack` setup.
+> CSS architecture is applied using [@papillonads/css](https://github.com/papillonads/papillonads/tree/master/packages/css/src/primer) design tokens and CSS scoping is adressed using `CSS Modules` configured in `webpack` setup.
 
 ## 📗 Library
 
-> Library is applied using `@papillonads/library` for leveraging common generic functionality.
+> Library is applied using [@papillonads/library](https://github.com/papillonads/papillonads/tree/master/packages/library/src) for leveraging common generic functionality.
 
 ## 📗 Local Development
 
@@ -77,18 +109,18 @@
   - Run the following command in ❗️`packages/core`❗️ folder
     - `npm start`
 - Linting and formatting
-  - Run the following command in root folder
+  - Run the following command in `root` folder
     - `npm run lint:format`
 - Testing
   - Unit and integration testing (using `jest` snapshots)
-    - Run the following commands in root folder
+    - Run the following commands in `root` folder
       - `npm run test`
       - `npm run test:tdd`
   - Integration testing (using `storybook` stories)
-    - Run the following command in root folder
+    - Run the following command in `root` folder
       - `npm run start-storybook`
   - Report coverage
-    - Run the following command in root folder
+    - Run the following command in `root` folder
       - `npm run report-coverage`
 
 ## 📗 Microsite
