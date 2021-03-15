@@ -45,7 +45,7 @@ exports[`<ListCarPage /> Render must match regular() 1`] = `
       <div
         className="Subhead-heading"
       >
-        List Cars
+        Buy a car
       </div>
     </div>
     <div
@@ -90,6 +90,12 @@ exports[`<ListCarPage /> Render must match regular() 1`] = `
           <div
             className="contentDisplaySearchPartField"
           >
+            <span
+              className="contentDisplaySearchPartFieldLabel IssueLabel bg-blue text-white"
+              title="Label: Brand:"
+            >
+              Brand:
+            </span>
             <div
               className="contentDisplaySearchPartFieldSelect select"
             >
@@ -574,6 +580,12 @@ exports[`<ListCarPage /> Render must match regular() 1`] = `
           <div
             className="contentDisplaySearchPartField"
           >
+            <span
+              className="contentDisplaySearchPartFieldLabel IssueLabel bg-blue text-white"
+              title="Label: Model:"
+            >
+              Model:
+            </span>
             <div
               className="contentDisplaySearchPartFieldSelect select"
             >
@@ -585,9 +597,19 @@ exports[`<ListCarPage /> Render must match regular() 1`] = `
               />
             </div>
           </div>
+        </div>
+        <div
+          className="contentDisplaySearchPart"
+        >
           <div
             className="contentDisplaySearchPartField"
           >
+            <span
+              className="contentDisplaySearchPartFieldLabel IssueLabel bg-blue text-white"
+              title="Label: Keywords:"
+            >
+              Keywords:
+            </span>
             <input
               aria-label="Type in license plate"
               className="contentDisplaySearchPartFieldInput form-control"
@@ -605,6 +627,12 @@ exports[`<ListCarPage /> Render must match regular() 1`] = `
           <div
             className="contentDisplaySearchPartField"
           >
+            <span
+              className="contentDisplaySearchPartFieldLabel IssueLabel bg-blue text-white"
+              title="Label: Year:"
+            >
+              Year:
+            </span>
             <div
               className="contentDisplaySearchPartFieldSelect select"
             >
@@ -1350,40 +1378,37 @@ exports[`<ListCarPage /> Render must match regular() 1`] = `
               </select>
             </div>
           </div>
-          <div
-            className="contentDisplaySearchPartField"
-          >
-            <button
-              aria-disabled="true"
-              autoFocus={false}
-              className="contentDisplaySearchPartFieldButton btn btn-primary button-inactive"
-              data-test={null}
-              id="B"
-              onClick={[Function]}
-              type="button"
-            >
-              <mock-file
-                aria-hidden="true"
-                aria-label={null}
-                className="mr-2"
-                height={16}
-                role="img"
-                style={
-                  Object {
-                    "display": "inline-block",
-                    "fill": "currentColor",
-                    "userSelect": "none",
-                    "verticalAlign": "text-bottom",
-                  }
-                }
-                viewBox="0 0 16 16"
-                width={16}
-              />
-              Search Cars
-            </button>
-          </div>
         </div>
       </div>
+      <button
+        aria-disabled="true"
+        autoFocus={false}
+        className="btn btn-primary button-inactive"
+        data-test={null}
+        disabled="true"
+        id="B"
+        onClick={[Function]}
+        type="button"
+      >
+        <mock-file
+          aria-hidden="true"
+          aria-label={null}
+          className="mr-2"
+          height={16}
+          role="img"
+          style={
+            Object {
+              "display": "inline-block",
+              "fill": "currentColor",
+              "userSelect": "none",
+              "verticalAlign": "text-bottom",
+            }
+          }
+          viewBox="0 0 16 16"
+          width={16}
+        />
+        Search Cars
+      </button>
       <nav
         aria-label="Pagination Top"
         className="contentDisplayPagination paginate-container"

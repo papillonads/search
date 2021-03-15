@@ -24,5 +24,5 @@ export const messageType = Object.freeze({
 })
 
 export const pageContent = Object.freeze({
-  listCar: { subheadHeadingLeft: 'List Cars', subheadHeadingRight: 'Search Stock', contextNavigationItemText: 'List Cars' },
+  listCar: { subheadHeadingLeft: 'Buy a car', subheadHeadingRight: 'Search Stock', contextNavigationItemText: 'List Cars' },
 })
