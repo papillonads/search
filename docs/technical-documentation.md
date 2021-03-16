@@ -89,6 +89,10 @@
 
 - [Component](https://github.com/papillonads/papillonads/tree/master/packages/components/src/primer/Pagination/PreviousNext), [Storybook](https://papillonads.github.io/papillonads/?path=/story/primer-atom-pagination-previousnext)
 
+### 📖. Navigation TabNav
+
+- [Component](https://github.com/papillonads/papillonads/tree/master/packages/components/src/primer/Navigation/TabNav), [Storybook](https://papillonads.github.io/papillonads/?path=/story/primer-molecule-navigation-tabnav)
+
 ### 📖. Select
 
 - [Component](https://github.com/papillonads/papillonads/blob/master/packages/components/src/primer/Select), [Storybook](https://papillonads.github.io/papillonads/?path=/story/primer-atom-select)
