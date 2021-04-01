@@ -34,7 +34,7 @@ const configureBabelLoader = (browserList) => {
             {
               modules: false,
               useBuiltIns: 'entry',
-              corejs: '3.9.1',
+              corejs: '3.10.0',
               targets: {
                 browsers: browserList,
               },
@@ -50,6 +50,12 @@ const configureBabelLoader = (browserList) => {
           '@babel/plugin-proposal-optional-chaining',
           '@babel/plugin-syntax-dynamic-import',
           '@babel/plugin-transform-classes',
+          [
+            '@babel/plugin-transform-react-jsx',
+            {
+              runtime: 'automatic',
+            },
+          ],
           '@babel/plugin-transform-runtime',
           '@babel/plugin-transform-spread',
           'syntax-async-functions',
