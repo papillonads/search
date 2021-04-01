@@ -243,7 +243,7 @@ module.exports = [
   //                 {
   //                   module: 'react',
   //                   entry: {
-  //                     path: 'https://unpkg.com/react@17.0.1/umd/react.production.min.js',
+  //                     path: 'https://unpkg.com/react@17.0.2/umd/react.production.min.js',
   //                     attributes: {
   //                       crossorigin: 'anonymous',
   //                     },
@@ -253,7 +253,7 @@ module.exports = [
   //                 {
   //                   module: 'react-dom',
   //                   entry: {
-  //                     path: 'https://unpkg.com/react-dom@17.0.1/umd/react-dom.production.min.js',
+  //                     path: 'https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js',
   //                     attributes: {
   //                       crossorigin: 'anonymous',
   //                     },
@@ -296,7 +296,7 @@ module.exports = [
           {
             module: 'react',
             entry: {
-              path: 'https://unpkg.com/react@17.0.1/umd/react.production.min.js',
+              path: 'https://unpkg.com/react@17.0.2/umd/react.production.min.js',
               attributes: {
                 crossorigin: 'anonymous',
               },
@@ -306,7 +306,7 @@ module.exports = [
           {
             module: 'react-dom',
             entry: {
-              path: 'https://unpkg.com/react-dom@17.0.1/umd/react-dom.production.min.js',
+              path: 'https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js',
               attributes: {
                 crossorigin: 'anonymous',
               },
