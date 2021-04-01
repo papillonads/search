@@ -1,13 +1,13 @@
-import React from 'react'
+import { lazy, Suspense } from 'react'
 import { defaultProps, propTypes } from './ListCarPage.prop'
 
-const LazyListCarPage = React.lazy(() => import('./ListCarPage'))
+const LazyListCarPage = lazy(() => import('./ListCarPage'))
 
 export function AsyncListCarPage() {
   return (
-    <React.Suspense fallback={null}>
+    <Suspense fallback={null}>
       <LazyListCarPage />
-    </React.Suspense>
+    </Suspense>
   )
 }
 

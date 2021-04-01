@@ -1,4 +1,3 @@
-import React from 'react'
 import { primer } from '@papillonads/components'
 import { Navigator } from '../../molecule/Navigator'
 import { defaultProps, propTypes } from './ListCarTemplate.prop'

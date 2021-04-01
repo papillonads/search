@@ -1,6 +1,6 @@
 import React from 'react'
-import { primer } from '@papillonads/components'
 import ReactDOM from 'react-dom'
+import { primer } from '@papillonads/components'
 import { Provider } from 'react-redux'
 import { withRouter } from 'react-router'
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'

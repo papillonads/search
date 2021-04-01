@@ -1,4 +1,3 @@
-import React from 'react'
 import { ListCarTemplate } from '../../template/ListCarTemplate'
 import { defaultProps, propTypes } from './ListCarPage.prop'
 

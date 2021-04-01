@@ -1,4 +1,3 @@
-import React from 'react'
 import { primer } from '@papillonads/components'
 import { defaultProps, propTypes } from './Navigator.prop'
 import { useNavigatorState } from './Navigator.hook'

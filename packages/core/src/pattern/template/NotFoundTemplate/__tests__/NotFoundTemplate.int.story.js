@@ -1,4 +1,3 @@
-import React from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import { withTests } from '@storybook/addon-jest'
 import { NotFoundTemplate } from '../NotFoundTemplate'
