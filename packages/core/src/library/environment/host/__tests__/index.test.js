@@ -17,12 +17,14 @@ describe('index', () => {
   describe('currentHost', () => {
     test('must equal localhost when running on localhost', async () => {
       jest.spyOn(window, 'location', 'get').mockImplementation(() => ({ href: localhostHref }))
+
       const { currentHost, localHost } = await import('../index')
       expect(currentHost).toEqual(localHost)
     })
 
     test('must equal elsewhere host when running elsewhere', async () => {
       jest.spyOn(window, 'location', 'get').mockImplementation(() => ({ href: elsewhereHref }))
+
       const { currentHost } = await import('../index')
       expect(currentHost).toEqual('elsewhere')
     })

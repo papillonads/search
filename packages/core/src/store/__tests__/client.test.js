@@ -35,6 +35,7 @@ jest.mock('../../state', () => ({
   },
 }))
 jest.mock('../reducer', () => ({ getAppReducer: jest.fn() }))
+jest.mock('../../library/environment/host', () => ({ isRunningOnLocalHost: true }))
 
 const reduxMockObject = require('redux') // eslint-disable-line
 const reduxLoggerMockObject = require('redux-logger') // eslint-disable-line
