@@ -32,12 +32,12 @@
     "renderMount": false,
     "renderShallow": false
   },
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
     },
-    "ecmaVersion": 11,
+    "ecmaVersion": 12,
     "sourceType": "module"
   },
   "plugins": [
@@ -88,6 +88,12 @@
   },
   "settings": {
     "import/resolver": {
+      "alias" : {
+        "map" : [
+          ["@papillonads/components","@papillonads/components/build"]
+        ],
+        "extensions": [".js"]
+      },
       "node": {
         "extensions": [
           ".js",
