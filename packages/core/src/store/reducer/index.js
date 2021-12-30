@@ -18,6 +18,7 @@ import { uiSetListCarsPagination } from './ui/listCars/pagination'
 
 export const getAppReducer = () =>
   combineReducers({
+    // eslint-disable-next-line default-param-last
     context: (state = {}, action) => {
       switch (action.type) {
         case CONTEXT_SET_NAVIGATION:
@@ -28,6 +29,7 @@ export const getAppReducer = () =>
           return state
       }
     },
+    // eslint-disable-next-line default-param-last
     ui: (state = {}, action) => {
       switch (action.type) {
         case UI_SELECT_LIST_CARS:

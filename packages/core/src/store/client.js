@@ -1,3 +1,4 @@
+/* eslint-disable import/no-import-module-exports */
 import { createStore } from 'redux'
 import { state } from '../state'
 import { Store } from './base'
