@@ -1,9 +1,9 @@
+/* eslint-disable import/no-import-module-exports */
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { primer } from '@papillonads/components'
 import { Provider } from 'react-redux'
-import { withRouter } from 'react-router'
-import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom'
 import { checkAccessibilityIssues } from '@papillonads/library/a11y'
 import { startPagePath } from './route/path'
 import { appRootRoute, listCarPageRoute, notFoundPageRoute } from './route'
@@ -17,13 +17,11 @@ export function App() {
     <ErrorBoundary>
       <Provider store={clientAppStore}>
         <BrowserRouter>
-          <Switch>
-            <Route exact={appRootRoute.exact} path={appRootRoute.path}>
-              <Redirect to={startPagePath} />
-            </Route>
-            <Route exact={listCarPageRoute.exact} path={listCarPageRoute.path} component={listCarPageRoute.clientComponent} />
-            <Route component={withRouter(notFoundPageRoute.clientComponent)} />
-          </Switch>
+          <Routes>
+            <Route path={appRootRoute.path} element={<Navigate to={startPagePath} />} />
+            <Route path={listCarPageRoute.path} element={listCarPageRoute.clientComponent()} />
+            <Route path="*" element={notFoundPageRoute.clientComponent()} />
+          </Routes>
         </BrowserRouter>
       </Provider>
     </ErrorBoundary>
