@@ -1,39 +1,40 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Navigator /> Render must match regular 1`] = `
-<div
-  className="navigator"
->
+<div>
   <div
-    className="navigatorHeading Subhead"
+    class="navigator"
   >
     <div
-      className="Subhead-heading"
-    />
-  </div>
-  <div
-    className="tabnav"
-  >
-    <nav
-      aria-label="List Cars"
-      className="tabnav-tabs"
+      class="navigatorHeading Subhead"
     >
-      <a
-        aria-current="page"
-        className="tabnav-tab"
-        href="/list"
-        onClick={[Function]}
-      >
-        List Cars
-      </a>
-    </nav>
-  </div>
-  <div
-    className="navigatorHeading Subhead"
-  >
+      <div
+        class="Subhead-heading"
+      />
+    </div>
     <div
-      className="Subhead-heading"
-    />
+      class="tabnav"
+    >
+      <nav
+        aria-label="List Cars"
+        class="tabnav-tabs"
+      >
+        <a
+          aria-current="page"
+          class="tabnav-tab"
+          href="/list"
+        >
+          List Cars
+        </a>
+      </nav>
+    </div>
+    <div
+      class="navigatorHeading Subhead"
+    >
+      <div
+        class="Subhead-heading"
+      />
+    </div>
   </div>
 </div>
 `;

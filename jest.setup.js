@@ -1,20 +1,10 @@
 import 'jsdom-global/register'
-import 'jest-enzyme'
 
-import renderer from 'react-test-renderer'
-
-import Enzyme, { shallow, mount } from 'enzyme'
-import Adapter from '@wojtekmaj/enzyme-adapter-react-17'
+import { render } from '@testing-library/react'
 
 import 'expect-puppeteer'
 
-Enzyme.configure({ adapter: new Adapter() })
-
-global.renderToJSON = (component) => renderer.create(component).toJSON()
-
-global.renderMount = (component) => mount(component)
-
-global.renderShallow = (component) => shallow(component)
+global.renderToJSON = (component) => render(component).container
 
 require('whatwg-fetch')
 
